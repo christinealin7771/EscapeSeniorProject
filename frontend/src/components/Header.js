@@ -23,11 +23,11 @@ const Header = () => {
   <>
     <div>
       <Navbar expand="lg" style={navBarBackColor}>
-        <Navbar.Brand as={Link} to="/home" style={navBarText}>Escape the Senior Project</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" style={navBarText}>Escape the Senior Project</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav className="ml-auto">
-                <Button as={Link} to="/home" style={compButtonStyle}>Home</Button>
+                <Button as={Link} to="/" style={compButtonStyle}>Home</Button>
                 <Button as={Link} to="/game" style={compButtonStyle}>Game</Button>
                 <Button as={Link} to="/about" style={compButtonStyle}>About</Button>
             </Nav>
