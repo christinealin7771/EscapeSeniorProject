@@ -1,5 +1,5 @@
 import React from 'react'
-import DeveloperAbout from './DeveloperAbout'
+import DeveloperAbout from '../misc/DeveloperAbout'
 import Red from "./../images/Red.png"
 import Escape from "./../images/escape.png"
 

@@ -7,7 +7,8 @@ const Game = () => {
     paddingTop: "0.5rem",
     justifyContent: "center",
     display: "flex",
-    paddingBottom: '5rem'
+    paddingBottom: '5rem',
+    // border: '0.2rem solid black',
   }
 
   const { unityProvider } = useUnityContext({
