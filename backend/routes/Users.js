@@ -12,7 +12,7 @@ router.post('/addUser', (req, res) => {
         else {
             const newUser = new Users({
                 username: req.body.username,
-                escapeTime: "0"
+                escapeTime: req.body.escapeTime
             })
 
             await newUser.save()
@@ -51,5 +51,25 @@ router.get("/finduser", async (req, res) => {
 
     })
 })
+
+router.get("/users", async (req, res) => {
+	await Users.find()
+    .then((response) => {
+        // return success response
+        res.status(200).send({
+            message: "Get All Users",
+            allUsers: response
+        });
+    })
+    .catch((e) => {
+        res.status(404).send({
+            message: "Users not found",
+        });
+
+    })
+
+	
+})
+
 
 module.exports = router
