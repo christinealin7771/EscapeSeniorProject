@@ -1,8 +1,13 @@
 import React from 'react';
 import DeveloperAbout from '../misc/DeveloperAbout';
+import { Container, Row, Col } from 'react-bootstrap';
+
+/* Images */
 import Red from "./../images/Red.png";
 import Escape from "./../images/escape.png";
-import { Container, Row, Col } from 'react-bootstrap';
+import Joseph_Fleming from "./../images/profile_pic/Joseph_Fleming.png"
+import Christine_Lin from "./../images/profile_pic/Christine_Lin.png"
+
 
 const About = () => {
   
@@ -15,19 +20,19 @@ const About = () => {
         </p>
         <Row className="justify-content-center">
           <Col xs={12} sm={6} md={4} lg={4}>
-            <DeveloperAbout name={"Christine Lin"} funFact={"Chicken Nugget"} pic={Red}/>
+            <DeveloperAbout name={"Christine Lin"} major={"Computer Science"} funFact={"Chicken Nugget"} pic={Christine_Lin} linkedinUrl={"https://www.linkedin.com/in/lin-christine/"}/>
           </Col>
           <Col xs={12} sm={6} md={4} lg={4}>
-            <DeveloperAbout name={"Joseph Fleming"} funFact={"McChicken"} pic={Red}/>
+            <DeveloperAbout name={"Joseph Fleming"} major={"Computer Science"} funFact={"McChicken"} pic={Joseph_Fleming} linkedinUrl={"https://www.linkedin.com/in/josephpfleming/"}/>
           </Col>
           <Col xs={12} sm={6} md={4} lg={4}>
-            <DeveloperAbout name={"Kelly Chen"} funFact={"Big Mac"} pic={Red}/>
+            <DeveloperAbout name={"Kelly Chen"} major={"Computer Science"} funFact={"Big Mac"} pic={Red}/>
           </Col>
           <Col xs={12} sm={6} md={4} lg={4}>
-            <DeveloperAbout name={"Moojin Ahn"} funFact={"Potato"} pic={Red}/>
+            <DeveloperAbout name={"Moojin Ahn"} major={"Computer Science"} funFact={"Potato"} pic={Red}/>
           </Col>
           <Col xs={12} sm={6} md={4} lg={4}>
-            <DeveloperAbout name={"Radoslav Savenkov"} funFact={"Sandwich"} pic={Red}/>
+            <DeveloperAbout name={"Radoslav Savenkov"} major={"Computer Science"} funFact={"Sandwich"} pic={Red}/>
           </Col>
         </Row>
 
