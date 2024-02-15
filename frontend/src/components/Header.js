@@ -6,6 +6,7 @@ const Header = () => {
 
   const navBarBackColor = {
     backgroundColor: '#0052CC',
+    height: '70px',
   };
 
   const compButtonStyle = {

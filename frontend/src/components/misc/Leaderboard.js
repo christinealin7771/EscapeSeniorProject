@@ -37,7 +37,7 @@ const Leaderboard = () => {
 
   return (
     <>
-    <Card className="text-center" style={{ width: '25rem', backgroundColor: '#FCC490', border: 'none'}}>
+    <Card className="text-center" style={{ width: '35rem', backgroundColor: '#FCC490', border: 'none'}}>
         <Card.Body>
             <Card.Title className="font-weight-bold" style={{padding: '20px'}}>
                 Leaderboard
