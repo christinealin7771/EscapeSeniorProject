@@ -21,7 +21,7 @@ const About = () => {
         <p style={{ maxWidth: '40rem', fontSize: "1.3rem"}}>
           This game and website were made for UF's Senior Project class in the Department of Computer Science. Here are the Developers!
         </p>
-        <Row  style={{marginLeft: "-150px"}}>
+        <Row style={{marginLeft: "-150px"}}>
           <Col xs={12} sm={6} md={3} lg={1} style={{margin: "20px", paddingRight: "280px"}}>
             <DeveloperAbout name={"Christine Lin"} major={"Computer Science"} funFact={"Chicken Nugget"} pic={Christine_Lin} linkedinUrl={"https://www.linkedin.com/in/lin-christine/"}/>
           </Col>
