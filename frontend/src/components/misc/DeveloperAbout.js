@@ -6,10 +6,11 @@ const DeveloperAbout = ({name,major, funFact, pic, linkedinUrl}) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const cardStyle = {
-        width: '15rem',
+        width: '16rem',
         margin: '1rem',
         radius: '0.50px',
         border: '0.1rem solid black',
+        // padding: '5rem'
     }
 
 

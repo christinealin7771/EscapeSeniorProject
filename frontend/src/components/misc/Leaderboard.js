@@ -10,11 +10,12 @@ const Leaderboard = () => {
     useEffect(() => {
         axios.get(process.env.REACT_APP_GET_ALL_USER_API_URL)
         .then((response) => {
-            // console.log(response.data.allUsers)
+            console.log(response.data.allUsers)
             setUsers(response.data.allUsers)
             setTopFive(getTopFiveFastestTimes(response.data.allUsers))
         })
         .catch((error) => {
+            console.log(error)
             console.log("Error with fetching users")
         })
     })
