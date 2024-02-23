@@ -10,29 +10,6 @@ const About = () => {
   return (
     <Container>
       <div align="center">
-<<<<<<< Updated upstream
-        <h1 style={{ paddingTop: '2.5rem', paddingBottom: '0.5rem', fontWeight: 'bold' }}> About the Developers </h1>
-        <p style={{ maxWidth: '40rem', fontSize: "1.3rem"}}>
-          This game and website were made for UF's Senior Project class in the Department of Computer Science. Here are the Developers!
-        </p>
-        <Row>
-          <Col xs={12} sm={6} md={3} lg={3} style={{margin: '20px'}}>
-            <DeveloperAbout name={"Christine Lin"} funFact={"Chicken Nugget"} pic={Red}/>
-          </Col>
-          <Col xs={12} sm={6} md={3} lg={3} style={{margin: '20px'}}>
-            <DeveloperAbout name={"Joseph Fleming"} funFact={"McChicken"} pic={Red}/>
-          </Col>
-          <Col xs={12} sm={6} md={3} lg={3} style={{margin: '20px'}}>
-            <DeveloperAbout name={"Kelly Chen"} funFact={"Big Mac"} pic={Red}/>
-          </Col>
-          <Col xs={12} sm={6} md={3} lg={3} style={{margin: '20px'}}>
-            <DeveloperAbout name={"Moojin Ahn"} funFact={"Potato"} pic={Red}/>
-          </Col>
-          <Col xs={12} sm={6} md={3} lg={3} style={{margin: '20px'}}>
-            <DeveloperAbout name={"Radoslav Savenkov"} funFact={"Sandwich"} pic={Red}/>
-          </Col>
-        </Row>
-=======
         <h1 style={{ paddingTop: '2.5rem', paddingBottom: '0.5rem', color: '#FFFFFF'}}> About the Developers </h1>
         <p style={{ maxWidth: '40rem', fontSize: "1.3rem", color: '#FFFFFF'}}>
           This game and website were made for UF's Senior Project class in the Department of Computer Science. Here are the Developers!
@@ -78,6 +55,5 @@ const About = () => {
     </Container>
   );
 };
->>>>>>> Stashed changes
 
 export default About;
