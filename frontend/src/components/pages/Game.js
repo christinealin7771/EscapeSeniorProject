@@ -20,7 +20,7 @@ const Game = () => {
 
   return (
     <div align="center">
-        <h1 style={{ paddingTop: '2.5rem'}}>Difficulty: Easy</h1>
+        <h1 style={{ paddingTop: '2.5rem', fontFamily: "'Anton', sans-serif", color:'#FFFFFF'}}>Difficulty: Easy</h1>
         <div style={gameStyle}>
           <Unity unityProvider={unityProvider} style={{ width: '75%', height: '75%' }} />
         </div>

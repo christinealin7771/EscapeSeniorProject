@@ -4,8 +4,9 @@ import Card from 'react-bootstrap/Card';
 const DeveloperAbout = ({name, funFact, pic}) => {
 
     const cardStyle = {
-        width: '20rem',
-        margin: '1rem',
+        width: '200px',
+        height: '400px',
+        margin: '20px',
         // border: '0.2rem solid black',
     }
 

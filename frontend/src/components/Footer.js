@@ -17,14 +17,14 @@ const Footer = () => {
 return (
     <>
         <div>
-            <Navbar expand="lg" fixed="bottom" style={footerBackColor}>
+            <Navbar style={footerBackColor}>
                 <Navbar.Brand style={footerText}> 2024 </Navbar.Brand>
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-                <Nav>
+                {/* <Nav>
                     <Nav.Link as={Link} to="/home" style={footerText}>Home</Nav.Link>
                     <Nav.Link as={Link} to="/game" style={footerText}>Game</Nav.Link>
                     <Nav.Link as={Link} to="/about" style={footerText}>About</Nav.Link>
-                </Nav>
+                </Nav> */}
                 </Navbar.Collapse>
             </Navbar>
         </div>

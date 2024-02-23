@@ -3,38 +3,45 @@ import { Card, Button, Container, Col, Row } from 'react-bootstrap'
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom'
 import CarouselPic from '../misc/Carousel'
 import Leaderboard from '../misc/Leaderboard'
+import placeholder from '../images/PlaceHolder.png'
+import './Home.css';
 
 
 const Home = () => {
 
   const compButtonStyle = {
-    backgroundColor: '#FF6800',
+    backgroundColor: '#F8A528',
     border: 'none',
     marginTop: '30px',
+    fontFamily: "'Anton', sans-serif",
+    width: '150px',
+    fontSize: '24px',
   };
 
   return (
   <>
-    <Container>
-    <div style={{ textAlign: 'center', padding: '20px' }}>
-      <h1>CAN YOU MAKE IT OUT WITHOUT GETTING CHOMPED?</h1>
-    </div>
-    </Container>
+    
+  <div class="top-section landing">
+      <div class="center">
+        <p1 class="landingStatement">CAN YOU MAKE IT OUT WITHOUT GETTING </p1>
+      </div>
+      <div>
+      <p1 class="chomped">CHOMPED?</p1>
+      </div>
+      <Button as={Link} to="/game" style={compButtonStyle}>Play!</Button>
+  </div>
 
-    <Container className="d-flex align-items-center justify-content-center" style={{ height: '60vh' }}>
-      <Row>
-        <Col md={6}>
-          <Card style={{ width: '25rem', backgroundColor: '#FCC490', border: 'none'}}>
-            <CarouselPic/>
-            <Button as={Link} to="/game" style={compButtonStyle}>Play!</Button>
-          </Card>
-        </Col>
+  <div class="bottom-section leaderboard d-flex justify-content-center">
+      <Row> 
+      <Col style={{paddingRight: '100px'}}>
+        <Leaderboard/>
+      </Col>
 
-        <Col md={6}>
-          <Leaderboard/>
-        </Col>
-      </Row>
-    </Container>
+      <Col>
+        <img height = '400px' width = '500px' src={placeholder}></img>
+      </Col>
+    </Row>
+  </div>
   </>
 
   )
