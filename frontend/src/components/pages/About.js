@@ -5,6 +5,13 @@ import Escape from "./../images/escape.png";
 import { Container, Row, Col } from 'react-bootstrap';
 import Footer from '../Footer';
 
+// Developers
+import Joseph_Fleming from "./../images/profile_pic/Joseph_Fleming.jpeg"
+import Christine_Lin from "./../images/profile_pic/Christine_Lin.jpeg"
+import Kelly_Chen from "./../images/profile_pic/Kelly_Chen.jpeg"
+import Radoslav_Savenkov from "./../images/profile_pic/Radoslav_Savenkov.jpeg"
+import Moojin_Ahn from "./../images/profile_pic/Moojin_Ahn.jpeg"
+
 const About = () => {
   
   return (
@@ -16,19 +23,19 @@ const About = () => {
         </p>
         <Row className="justify-content-center">
         <Col xs={12} sm={6} md={4} lg={2}>
-            <DeveloperAbout name={"Christine Lin"} funFact={"Chicken Nugget"} pic={Red}/>
+            <DeveloperAbout name={"Christine Lin"} major={"Computer Science"} funFact={"Chicken Nugget"} pic={Christine_Lin} linkedinUrl={"https://www.linkedin.com/in/lin-christine/"}/>
           </Col>
           <Col xs={12} sm={6} md={4} lg={2}>
-            <DeveloperAbout name={"Joseph Fleming"} funFact={"McChicken"} pic={Red}/>
+              <DeveloperAbout name={"Joseph Fleming"} major={"Computer Science"} funFact={"McChicken"} pic={Joseph_Fleming} linkedinUrl={"https://www.linkedin.com/in/josephpfleming/"}/>
           </Col>
           <Col xs={12} sm={6} md={4} lg={2}>
-            <DeveloperAbout name={"Kelly Chen"} funFact={"Big Mac"} pic={Red}/>
+              <DeveloperAbout name={"Kelly Chen"} major={"Computer Science"} funFact={"Big Mac"} pic={Kelly_Chen} linkedinUrl={"https://www.linkedin.com/in/kelly--chen/"}/>
           </Col>
           <Col xs={12} sm={6} md={4} lg={2}>
-            <DeveloperAbout name={"Moojin Ahn"} funFact={"Potato"} pic={Red}/>
+              <DeveloperAbout name={"Moojin Ahn"} major={"Computer Science"} funFact={"Potato"} pic={Moojin_Ahn} linkedinUrl={"https://www.linkedin.com/in/moojin-ahn/"}/>
           </Col>
           <Col xs={12} sm={6} md={4} lg={2}>
-            <DeveloperAbout name={"Radoslav Savenkov"} funFact={"Sandwich"} pic={Red}/>
+              <DeveloperAbout name={"Radoslav Savenkov"} major={"Computer Science"} funFact={"Sandwich"} pic={Radoslav_Savenkov} linkedinUrl={"https://www.linkedin.com/in/radoslav-savenkov/"}/>
           </Col>
         </Row>
 
