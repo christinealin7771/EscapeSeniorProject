@@ -1,5 +1,6 @@
 import React from 'react'
 import { Unity, useUnityContext } from "react-unity-webgl";
+import Footer from '../Footer'
 
 const Game = () => {
 
@@ -19,6 +20,7 @@ const Game = () => {
   });
 
   return (
+    <>
     <div align="center">
         <h1 style={{ paddingTop: '2.5rem', fontFamily: "'Anton', sans-serif", color:'#FFFFFF'}}>Difficulty: Easy</h1>
         <div style={gameStyle}>
@@ -26,6 +28,9 @@ const Game = () => {
         </div>
        
     </div>
+
+    <Footer/>
+    </>
   )
 }
 

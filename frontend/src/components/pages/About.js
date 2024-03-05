@@ -8,6 +8,7 @@ import Footer from '../Footer';
 const About = () => {
   
   return (
+    <>
     <Container>
       <div align="center">
         <h1 style={{ paddingTop: '2.5rem', paddingBottom: '0.5rem', color: '#FFFFFF'}}> About the Developers </h1>
@@ -53,6 +54,9 @@ const About = () => {
         </Row>
       </div>
     </Container>
+
+    <Footer/>
+    </>
   );
 };
 
