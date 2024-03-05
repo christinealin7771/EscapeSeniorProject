@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Card from 'react-bootstrap/Card';
+import { FaLinkedin } from 'react-icons/fa';
 
-const DeveloperAbout = ({name, funFact, pic}) => {
+const DeveloperAbout = ({name, major, pic, linkedinUrl}) => {
+    const [isHovered, setIsHovered] = useState(false);
 
     const cardStyle = {
         width: '210px',
-        height: '400px',
+        height: '350px',
         margin: '20px',
         // border: '0.2rem solid black',
     }
@@ -13,13 +15,30 @@ const DeveloperAbout = ({name, funFact, pic}) => {
 
   return (
     <div>
-        <Card style={cardStyle} >
+        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}></a>
+        <Card style={cardStyle} 
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}>
             <Card.Img variant="top" src={pic}/>
+            {isHovered && (
+                <div
+                    style={{
+                        position: 'absolute',
+                        top: '0',
+                        right: '0',
+                        padding: '5px',
+                        color: 'black',
+                        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                        borderRadius: '0 0 0 5px',
+                    }}
+                >
+                    <FaLinkedin size={30} />
+                </div>
+            )}
             <Card.Body>
             <Card.Title>{name}</Card.Title>
             <Card.Text>
-                4th Year Computer Science Major
-                {funFact}
+                {major}
             </Card.Text>
             </Card.Body>
         </Card>
