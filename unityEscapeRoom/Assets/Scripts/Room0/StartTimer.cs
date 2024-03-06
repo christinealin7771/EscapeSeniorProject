@@ -11,12 +11,18 @@ public class StartTimer : MonoBehaviour
     public GameObject pauseMenuObject;
     public GameObject pauseButtonObject;
 
+    public GameObject pauseCanvas;
+
     private MouseLookAround mouseLookScript;
 
     // Start is called before the first frame update
     void Start()
     {
+
         DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(pauseCanvas);
+        // DontDestroyOnLoad(pauseMenuObject);
+        // DontDestroyOnLoad(pauseButtonObject);
         pauseMenuObject.SetActive(false);
 
         mouseLookScript = Camera.main.GetComponent<MouseLookAround>();

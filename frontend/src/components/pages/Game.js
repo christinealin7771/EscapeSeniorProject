@@ -4,23 +4,22 @@ import axios from "axios";
 
 const Game = () => {
 
-  const [username, setUsername] = useState();
-  const [escapeTime, setEscapeTime] = useState();
-
-
   const gameStyle = {
     paddingTop: "0.5rem",
     justifyContent: "center",
     display: "flex",
-    paddingBottom: '5rem',
+    paddingBottom: '2rem',
     // border: '0.2rem solid black',
   }
 
-  const { addEventListener, removeEventListener, unityProvider } = useUnityContext({
-    loaderUrl: "/Build/webglUnityEscapeRoomBuild.loader.js",
-    dataUrl: "/Build/webglUnityEscapeRoomBuild.data.unityweb",
-    frameworkUrl: "/Build/webglUnityEscapeRoomBuild.framework.js.unityweb",
-    codeUrl: "/Build/webglUnityEscapeRoomBuild.wasm.unityweb",
+  const [username, setUsername] = useState();
+  const [escapeTime, setEscapeTime] = useState();
+
+  const { addEventListener, removeEventListener, requestFullscreen, unityProvider } = useUnityContext({
+    loaderUrl: "/Build/Assembly-CSharp.loader.js",
+    dataUrl: "/Build/Assembly-CSharp.data.unityweb",
+    frameworkUrl: "/Build/Assembly-CSharp.framework.js.unityweb",
+    codeUrl: "/Build/Assembly-CSharp.wasm.unityweb",
   });
 
   const handleCreateUser = useCallback((username) => {
@@ -34,6 +33,10 @@ const Game = () => {
     })
     console.log(username)
   }, []);
+
+const handleFullScreenClick =()=> {
+    requestFullscreen(true);
+  }
 
   const updateUserEscapeTime = useCallback((username, userEscapeTime) => {
     setUsername(username)
@@ -60,11 +63,12 @@ const Game = () => {
 
   return (
     <div align="center">
-        <h1 style={{ paddingTop: '2.5rem'}}>Difficulty: Easy</h1>
+        <h1 style={{ paddingTop: '2.5rem', fontFamily: "'Anton', sans-serif", color:'#FFFFFF'}}>Difficulty: Easy</h1>
         <div style={gameStyle}>
-          {/* Make the compression format Gzip before building and check decompression fallback */}
           <Unity unityProvider={unityProvider} style={{ width: '75%', height: '75%' }} />
+          
         </div>
+        <button style={{marginBottom: "5rem"}} onClick={handleFullScreenClick}>Enter Fullscreen</button>;
        
     </div>
   )

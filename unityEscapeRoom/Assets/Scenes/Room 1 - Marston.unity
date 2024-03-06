@@ -261,6 +261,7 @@ MonoBehaviour:
   gamePaused: 0
   pauseMenuObject: {fileID: 845548593}
   pauseButtonObject: {fileID: 1955076821}
+  pauseCanvas: {fileID: 1506612475}
 --- !u!224 &153059088
 RectTransform:
   m_ObjectHideFlags: 0

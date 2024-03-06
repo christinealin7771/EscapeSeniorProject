@@ -2,27 +2,24 @@ import React, {useState} from 'react'
 import Card from 'react-bootstrap/Card';
 import { FaLinkedin } from 'react-icons/fa';
 
-const DeveloperAbout = ({name,major, funFact, pic, linkedinUrl}) => {
+const DeveloperAbout = ({name, major, pic, linkedinUrl}) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const cardStyle = {
-        width: '16rem',
-        margin: '1rem',
-        radius: '0.50px',
-        border: '0.1rem solid black',
-        // padding: '5rem'
+        width: '210px',
+        height: '350px',
+        margin: '20px',
+        // border: '0.2rem solid black',
     }
 
 
   return (
     <div>
-        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-        <Card 
-            style={cardStyle}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
-            <Card.Img style={{radius: '0.50px'}} variant="top" src={pic}/> 
+        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}></a>
+        <Card style={cardStyle} 
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}>
+            <Card.Img variant="top" src={pic}/>
             {isHovered && (
                 <div
                     style={{
@@ -43,12 +40,8 @@ const DeveloperAbout = ({name,major, funFact, pic, linkedinUrl}) => {
             <Card.Text>
                 {major}
             </Card.Text>
-            {/* <Card.Text>
-                {funFact}
-            </Card.Text> */}
             </Card.Body>
         </Card>
-        </a>
     </div>
   )
 }
