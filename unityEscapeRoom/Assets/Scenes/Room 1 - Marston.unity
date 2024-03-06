@@ -2370,6 +2370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: KeypadStandard
       objectReference: {fileID: 0}
+    - target: {fileID: 7334584600372072161, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c1998dc853e2baa44b36104bd5327835, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

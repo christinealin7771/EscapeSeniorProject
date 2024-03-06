@@ -715,7 +715,7 @@ MonoBehaviour:
   rotX: 0
   rotY: 0
   rotZ: 0
-  laptopVector: {x: 0, y: 0.05, z: 0.4}
+  laptopVector: {x: 0, y: 0.05, z: 0.25}
 --- !u!1001 &143603437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2507,7 +2507,7 @@ GameObject:
   - component: {fileID: 603651312}
   - component: {fileID: 603651311}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text clue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2521,7 +2521,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603651309}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2552,7 +2552,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: balls * minutes
+  m_text: ball * minutes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6627,8 +6627,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 388079842}
   - {fileID: 2101773940}
+  - {fileID: 388079842}
   - {fileID: 77030208}
   m_Father: {fileID: 83396316}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8176,7 +8176,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088131237}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
