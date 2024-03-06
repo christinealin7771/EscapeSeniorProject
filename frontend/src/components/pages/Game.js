@@ -9,17 +9,17 @@ const Game = () => {
   const gameStyle = {
     paddingTop: "2rem",
     justifyContent: "center",
-    paddingBottom: '5rem',
+    paddingBottom: '1rem',
   }
 
   const [username, setUsername] = useState();
   const [escapeTime, setEscapeTime] = useState();
 
-  const { addEventListener, removeEventListener, unityProvider } = useUnityContext({
-    loaderUrl: "/Build/escapeRoomUnity.loader.js",
-    dataUrl: "/Build/escapeRoomUnity.data.unityweb",
-    frameworkUrl: "/Build/escapeRoomUnity.framework.js.unityweb",
-    codeUrl: "/Build/escapeRoomUnity.wasm.unityweb",
+  const { addEventListener, removeEventListener, requestFullscreen, unityProvider } = useUnityContext({
+    loaderUrl: "/Build/Assembly-CSharp.loader.js",
+    dataUrl: "/Build/Assembly-CSharp.data.unityweb",
+    frameworkUrl: "/Build/Assembly-CSharp.framework.js.unityweb",
+    codeUrl: "/Build/Assembly-CSharp.wasm.unityweb",
   });
 
   const handleCreateUser = useCallback((username) => {
@@ -33,6 +33,10 @@ const Game = () => {
     })
     console.log(username)
   }, []);
+
+const handleFullScreenClick =()=> {
+    requestFullscreen(true);
+  }
 
   const updateUserEscapeTime = useCallback((username, userEscapeTime) => {
     setUsername(username)
@@ -80,7 +84,7 @@ const Game = () => {
     </div>
     </Col>
 
-    <Col xs={12} sm={12} md={10} lg={4} style={{paddingTop:'2rem', paddingBottom:'5rem'}}>
+    <Col xs={12} sm={12} md={10} lg={4} style={{paddingTop:'2rem', paddingBottom:'3rem'}}>
       <Form>
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Control as="textarea" rows={17} placeholder="For your escape plan..." />
@@ -89,7 +93,9 @@ const Game = () => {
     </Col>
     </Row>
     </Container>
+    <button style={{marginBottom: "5rem"}} onClick={handleFullScreenClick}>Enter Fullscreen</button>;
     </div>
+   
 
     <Footer/>
     </>
