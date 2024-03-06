@@ -5,6 +5,7 @@ import CarouselPic from '../misc/Carousel';
 import Leaderboard from '../misc/Leaderboard';
 import placeholder from '../images/PlaceHolder.png';
 import Footer from '../Footer';
+import TextBox from '../misc/textBox';
 import './Home.css';
 
 const Home = () => {

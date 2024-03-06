@@ -3,12 +3,13 @@ import { Unity, useUnityContext } from "react-unity-webgl";
 import axios from "axios";
 import Footer from '../Footer';
 import { Dropdown, Container, Form, Row, Col, } from 'react-bootstrap'
+import TextBox from '../misc/textBox';
+import Leaderboard from '../misc/Leaderboard';
 
 const Game = () => {
 
   const gameStyle = {
     paddingTop: "2rem",
-    justifyContent: "center",
     paddingBottom: '5rem',
   }
 
@@ -56,39 +57,46 @@ const Game = () => {
   }, [addEventListener, removeEventListener, updateUserEscapeTime]);
   
 
+  const [Difficulty, setDifficulty] = useState(null);
+
+  const handleSelect = (eventKey) => {
+    setDifficulty(eventKey);
+  };
+  
   return (
     <>
     <div align="center">
+      
         <h1 style={{ paddingTop: '2.5rem', fontFamily: "'Anton', sans-serif", color:'#FFFFFF'}}>Difficulty:</h1>
-        <Dropdown data-bs-theme="dark">
-          <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
-            Levels
+
+        <Dropdown onSelect={handleSelect} data-bs-theme="dark">
+          <Dropdown.Toggle variant="secondary">
+          {Difficulty || 'Select Difficulty'}
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Easy</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Medium</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Hard</Dropdown.Item>
+            <Dropdown.Item eventKey="Easy">Easy</Dropdown.Item>
+            <Dropdown.Item eventKey="Medium">Medium</Dropdown.Item>
+            <Dropdown.Item eventKey="Hard">Hard</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
     
-    <Container>
-    <Row className="justify-content-center">
-    <Col xs={12} sm={12} md={10} lg={8}>
-    <div style={gameStyle}>
-      <Unity unityProvider={unityProvider} style={{ width: '100%', height: '100%' }} />
-    </div>
-    </Col>
+      <Container>
+        <Row className="justify-content-center">
 
-    <Col xs={12} sm={12} md={10} lg={4} style={{paddingTop:'2rem', paddingBottom:'5rem'}}>
-      <Form>
-        <Form.Group controlId="exampleForm.ControlTextarea1">
-          <Form.Control as="textarea" rows={17} placeholder="For your escape plan..." />
-        </Form.Group>
-      </Form>
-    </Col>
-    </Row>
-    </Container>
+          <Col xs={12} sm={12} md={10} lg={9}>
+            <div style={gameStyle}>
+              <Unity unityProvider={unityProvider} style={{ width: '100%', height: '100%' }} />
+            </div>
+          </Col>
+
+          <Col xs={12} sm={12} md={10} lg={3} style={{paddingTop:'2rem', paddingBottom:'5rem'}}>
+            <TextBox/>
+          </Col>
+
+        </Row>
+      </Container>
+
     </div>
 
     <Footer/>
