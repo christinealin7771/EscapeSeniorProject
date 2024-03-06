@@ -1,19 +1,20 @@
 import React, {useState} from 'react'
-import Card from 'react-bootstrap/Card';
+import {Card, Container} from 'react-bootstrap';
 import { FaLinkedin } from 'react-icons/fa';
 
 const DeveloperAbout = ({name, major, pic, linkedinUrl}) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const cardStyle = {
-        width: '210px',
-        height: '350px',
-        margin: '20px',
+        width: '190px',
+        height: '280px',
+        marginTop: '20px',
         // border: '0.2rem solid black',
     }
 
 
   return (
+    <Container>
     <div>
         <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}></a>
         <Card style={cardStyle} 
@@ -43,6 +44,7 @@ const DeveloperAbout = ({name, major, pic, linkedinUrl}) => {
             </Card.Body>
         </Card>
     </div>
+    </Container>
   )
 }
 

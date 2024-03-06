@@ -37,7 +37,7 @@ const Leaderboard = () => {
     }
 
     // Styleing
-    const cardColor = {
+    const cardStyle = {
         background:'#3043AB',
         width: '410px', 
         border: '8px solid #D5D6D6',
@@ -49,7 +49,7 @@ const Leaderboard = () => {
         alignItems: 'center',
     };
 
-    const box = {
+    const leaderboardTitle = {
         width: '300px',
         height: '80px',
         background:' #D5D6D6',
@@ -69,9 +69,10 @@ const Leaderboard = () => {
   return (
     <>
 
-    <Card style={cardColor}>
+    <Container>
+    <Card style={cardStyle}>
 
-        <div style={box}>
+        <div style={leaderboardTitle}>
         <p>LEADERBOARD</p>
         </div>
 
@@ -89,6 +90,7 @@ const Leaderboard = () => {
 
         </Card.Body>
     </Card>
+    </Container>
     </>
   )
 }

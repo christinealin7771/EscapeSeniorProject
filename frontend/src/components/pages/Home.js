@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, Button, Container, Col, Row } from 'react-bootstrap';
+import React, {useState, useCallback,  useEffect} from 'react'
+import { Card, Button, Container, Col, Row, Image, Form } from 'react-bootstrap';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import CarouselPic from '../misc/Carousel';
 import Leaderboard from '../misc/Leaderboard';
@@ -27,24 +27,31 @@ const Home = () => {
           <p1 className="chomped">CHOMPED?</p1>
         </div>
         <Button as={Link} to="/game" style={compButtonStyle}>Play!</Button>
+        {/* <button as={Link} to="/game" style={compButtonStyle}>
+          <img src={gatorButton} alt="Button Image"/>
+        </button> */}
       </div>
 
-      <div className="bottom-section leaderboard">
-        <Container>
-          <Row className="justify-content-center"> 
-            <Col xs={12} md={6} style={{ marginTop: '50px'}} > 
-              <div className="text-center"> 
-                <Leaderboard />
-              </div>
+    <div className="bottom-section leaderboard d-flex align-items-center justify-content-center">
+    <Container>
+        <Row>
+            <Col xs={12} sm={12} md={10} lg={6} style={{paddingLeft: '50px', paddingTop: '30px'}}>
+                <Leaderboard/>
             </Col>
-            <Col xs={12} sm={6} md={4} style={{ marginTop: '50px', minHeight: '300px' }}> 
-              <img style={{ width: '100%'}} src={placeholder} alt="Placeholder Image" />
+            <Col xs={12} sm={12} md={10} lg={6} style={{paddingRight: '50px', paddingTop: '15px'}}>
+                <Card>
+                    <Image src={placeholder} rounded />
+                </Card>
             </Col>
-          </Row>
-        </Container>
-      </div>
+        </Row>
+    </Container>
+    </div>
 
-      <Footer />
+    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+        <Form.Label>Example textarea</Form.Label>
+        <Form.Control as="textarea" rows={3} />
+      </Form.Group> 
+  <Footer />
     </>
   );
 }
