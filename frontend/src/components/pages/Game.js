@@ -58,21 +58,26 @@ const handleFullScreenClick =()=> {
       removeEventListener("EndGame", updateUserEscapeTime);
     };
   }, [addEventListener, removeEventListener, updateUserEscapeTime]);
-  
+
+  const [Difficulty, setDifficulty] = useState(null);
+
+  const handleSelect = (eventKey) => {
+    setDifficulty(eventKey);
+  };
 
   return (
     <>
     <div align="center">
         <h1 style={{ paddingTop: '2.5rem', fontFamily: "'Anton', sans-serif", color:'#FFFFFF'}}>Difficulty:</h1>
-        <Dropdown data-bs-theme="dark">
-          <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
-            Levels
+        <Dropdown onSelect={handleSelect} data-bs-theme="dark">
+          <Dropdown.Toggle variant="secondary">
+          {Difficulty || 'Select Difficulty'}
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
-            <Dropdown.Item href="#/action-1">Easy</Dropdown.Item>
-            <Dropdown.Item href="#/action-2">Medium</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Hard</Dropdown.Item>
+            <Dropdown.Item eventKey="Easy">Easy</Dropdown.Item>
+            <Dropdown.Item eventKey="Medium">Medium</Dropdown.Item>
+            <Dropdown.Item eventKey="Hard">Hard</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
     
