@@ -16,10 +16,10 @@ const Game = () => {
   const [escapeTime, setEscapeTime] = useState();
 
   const { addEventListener, removeEventListener, requestFullscreen, unityProvider } = useUnityContext({
-    loaderUrl: "/Build/Assembly-CSharp.loader.js",
-    dataUrl: "/Build/Assembly-CSharp.data.unityweb",
-    frameworkUrl: "/Build/Assembly-CSharp.framework.js.unityweb",
-    codeUrl: "/Build/Assembly-CSharp.wasm.unityweb",
+    loaderUrl: "/Build/BuildFolder.loader.js",
+    dataUrl: "/Build/BuildFolder.data.unityweb",
+    frameworkUrl: "/Build/BuildFolder.framework.js.unityweb",
+    codeUrl: "/Build/BuildFolder.wasm.unityweb",
   });
 
   const handleCreateUser = useCallback((username) => {
