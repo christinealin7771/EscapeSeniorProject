@@ -2,17 +2,18 @@ import React, {useState, useCallback,  useEffect} from 'react'
 import { Unity, useUnityContext } from "react-unity-webgl";
 import axios from "axios";
 import Footer from '../Footer';
-import { Dropdown, Container, Form, Row, Col, } from 'react-bootstrap'
+import { Dropdown, Container, Form, Row, Col, Tab, Tabs } from 'react-bootstrap'
 import TextBox from '../misc/textBox';
-import Leaderboard from '../misc/Leaderboard';
+import Calculator from '../misc/Calculator';
+import './Game.css'
 
 const Game = () => {
 
   const gameStyle = {
     paddingTop: "2rem",
     paddingBottom: '5rem',
-  }
-
+  };
+  
   const [username, setUsername] = useState();
   const [escapeTime, setEscapeTime] = useState();
 
@@ -59,6 +60,8 @@ const Game = () => {
 
   const [Difficulty, setDifficulty] = useState(null);
 
+  const [key, setKey] = useState('Notepad');
+
   const handleSelect = (eventKey) => {
     setDifficulty(eventKey);
   };
@@ -66,8 +69,8 @@ const Game = () => {
   return (
     <>
     <div align="center">
-      
-        <h1 style={{ paddingTop: '2.5rem', fontFamily: "'Anton', sans-serif", color:'#FFFFFF'}}>Difficulty:</h1>
+
+        <h1 style={{ paddingTop: '2.5rem', fontFamily: "'Anton', sans-serif", color:'#000000'}}>Difficulty:</h1>
 
         <Dropdown onSelect={handleSelect} data-bs-theme="dark">
           <Dropdown.Toggle variant="secondary">
@@ -86,12 +89,24 @@ const Game = () => {
 
           <Col xs={12} sm={12} md={10} lg={9}>
             <div style={gameStyle}>
-              <Unity unityProvider={unityProvider} style={{ width: '100%', height: '100%' }} />
+            <Unity unityProvider={unityProvider} style={{ width: '100%', height: '100%' }} />
             </div>
           </Col>
 
-          <Col xs={12} sm={12} md={10} lg={3} style={{paddingTop:'2rem', paddingBottom:'5rem'}}>
-            <TextBox/>
+          <Col xs={8} sm={8} md={8} lg={3} style={{paddingTop:'2rem', paddingBottom:'5rem'}}>
+            <Tabs
+              id="controlled-tab-example"
+              activeKey={key}
+              onSelect={(k) => setKey(k)}
+              className="mb-3 custom-tabs"
+            >
+              <Tab eventKey="Notepad" title="Notepad">
+                <TextBox/>
+              </Tab>
+              <Tab eventKey="Calculator" title="Calculator">
+                <Calculator/>
+              </Tab>
+            </Tabs>
           </Col>
 
         </Row>

@@ -18,8 +18,8 @@ const About = () => {
     <>
     <Container>
       <div align="center">
-        <h1 style={{ paddingTop: '2.5rem', paddingBottom: '0.5rem', color: '#FFFFFF'}}> About the Developers </h1>
-        <p style={{ maxWidth: '40rem', fontSize: "1.3rem", color: '#FFFFFF'}}>
+        <h1 style={{ paddingTop: '2.5rem', paddingBottom: '0.5rem', color: '#000000'}}> About the Developers </h1>
+        <p style={{ maxWidth: '40rem', fontSize: "1.3rem", color: '#000000'}}>
           This game and website were made for UF's Senior Project class in the Department of Computer Science. Here are the Developers!
         </p>
         <Row className="justify-content-center">
@@ -40,16 +40,16 @@ const About = () => {
           </Col>
         </Row>
 
-        <hr style={{ width: '70%', height: '10%',marginTop: '4rem', color: '#FFFFFF'}}></hr>
+        <hr style={{ width: '70%', height: '10%',marginTop: '4rem', color: '#000000'}}></hr>
 
-        <h1 style={{ paddingTop: '2rem', paddingBottom: '0.5rem', color: '#FFFFFF'}}> About the Game</h1>
+        <h1 style={{ paddingTop: '2rem', paddingBottom: '0.5rem', color: '#000000'}}> About the Game</h1>
 
         <Row className="justify-content-center">
           <Col xs={12} md={6} style={{ margin: '20px' }}>
             <img src={Escape} style={{ width: '100%' }}/>
           </Col>
           <Col xs={12} md={8} style={{ margin: '20px' }}>
-            <p style={{ fontSize: "30px", textAlign: 'center', color: '#FFFFFF'}}>
+            <p style={{ fontSize: "30px", textAlign: 'center', color: '#000000'}}>
               This game is powered by Unity and linked with React to this website. 
               Aspects of the website may be more than what they seem.
             </p>

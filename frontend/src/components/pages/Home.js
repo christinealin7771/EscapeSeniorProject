@@ -10,7 +10,7 @@ import './Home.css';
 
 const Home = () => {
   const compButtonStyle = {
-    backgroundColor: '#F8A528',
+    backgroundColor: '#5f8cc6',
     border: 'none',
     marginTop: '30px',
     fontFamily: "'Anton', sans-serif",
@@ -35,11 +35,11 @@ const Home = () => {
 
     <div className="bottom-section leaderboard d-flex align-items-center justify-content-center">
     <Container>
-        <Row>
-            <Col xs={12} sm={12} md={10} lg={6} style={{paddingLeft: '50px', paddingTop: '30px'}}>
+        <Row className='d-flex justify-content-center'>
+            <Col xs={12} sm={10} md={10} lg={6} style={{paddingTop: '30px'}}>
                 <Leaderboard/>
             </Col>
-            <Col xs={12} sm={12} md={10} lg={6} style={{paddingRight: '50px', paddingTop: '15px'}}>
+            <Col xs={12} sm={10} md={10} lg={6} style={{paddingTop: '15px'}}>
                 <Card>
                     <Image src={placeholder} rounded />
                 </Card>
@@ -48,7 +48,9 @@ const Home = () => {
     </Container>
     </div>
 
+  {/* <Calculator/> */}
   <Footer />
+
     </>
   );
 }

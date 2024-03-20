@@ -36,15 +36,15 @@ const Leaderboard = () => {
         return topFive;
     }
 
-    // Styleing
+    // Styling
     const cardStyle = {
-        background:'#3043AB',
+        background:'#90AACB',
         width: '410px', 
         border: '8px solid #D5D6D6',
         borderRadius: '50px',
         fontSize: '26px',
         fontFamily: "'Anton', sans-serif",
-        color: '#D5D6D6',
+        color: '#90AACB',
         justifyContent: 'center',
         alignItems: 'center',
     };
@@ -52,13 +52,13 @@ const Leaderboard = () => {
     const leaderboardTitle = {
         width: '300px',
         height: '80px',
-        background:' #D5D6D6',
+        background:'#D5D6D6',
         border: '8px solid #D5D6D6',
         borderRadius: '50px',
         fontSize: '40px',
         fontFamily: "'Anton', sans-serif",
         fontStyle: 'italic',
-        color: '#333F84',
+        color: 'rgb(48, 86, 132)',
         justifyContent: 'center',
         alignItems: 'center',
         display: 'flex',

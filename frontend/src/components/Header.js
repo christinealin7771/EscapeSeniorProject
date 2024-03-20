@@ -6,26 +6,22 @@ import logo from './images/lockLogo.png'
 const Header = () => {
 
   const navBarBackColor = {
-    background:'linear-gradient(to right,#2B00FF, #74461A)',
+    background:'#90AACB',
   };
 
   const compButtonStyle = {
     color: '#ffffff',
     marginRight: '40px',
     border: 'none',
-    marginTop: '10px',
-    fontSize: '23px',
+    fontSize: '21px',
     fontFamily: "'Anton', sans-serif",
-    marginBottom: '10px',
   };
 
   const navBarText = {
     color: '#ffffff',
-    marginLeft: '40px',
+    marginLeft: '20px',
     fontFamily: "'Anton', sans-serif",
-    fontSize: '23px',
-    marginTop: '10px',
-    marginBottom: '10px',
+    fontSize: '21px',
   };  
 
   return (
@@ -36,8 +32,8 @@ const Header = () => {
           <img
                 alt=""
                 src={logo}
-                width="60"
-                height="60"
+                width="50"
+                height="50"
             />{' '}
           Escape the Senior Project</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
