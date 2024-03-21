@@ -51,15 +51,27 @@ const Calculator = () => {
     switch (operator) {
         case "/":
             cal = String(parseFloat(preState) / parseFloat(currState));
+            if(isNaN(cal)){
+                cal = preState
+            }
             break;
         case "+":
             cal = String(parseFloat(preState) + parseFloat(currState));
+            if(isNaN(cal)){
+                cal = preState
+            }
             break;
         case "X":
             cal = String(parseFloat(preState) * parseFloat(currState));
+            if(isNaN(cal)){
+                cal = preState
+            }
             break;
         case "-":
             cal = String(parseFloat(preState) - parseFloat(currState));
+            if(isNaN(cal)){
+                cal = preState
+            }
             break;
         default:
             return
