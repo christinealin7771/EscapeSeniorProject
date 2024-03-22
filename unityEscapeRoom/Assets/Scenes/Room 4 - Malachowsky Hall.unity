@@ -3488,7 +3488,7 @@ GameObject:
   - component: {fileID: 876691167}
   - component: {fileID: 876691166}
   - component: {fileID: 876691165}
-  - component: {fileID: 876691164}
+  - component: {fileID: 876691169}
   m_Layer: 0
   m_Name: Front Door
   m_TagString: Untagged
@@ -3496,19 +3496,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &876691164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876691163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2be44b66501d2e84891b95a049507e7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorLocked: 1
 --- !u!65 &876691165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3595,6 +3582,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &876691169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876691163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06e8469a9fb2b6e498ed624c631563fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorLocked: 1
+  roomName: Room 5 - Century Tower
 --- !u!1 &916145117
 GameObject:
   m_ObjectHideFlags: 0
@@ -3795,7 +3796,7 @@ PrefabInstance:
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 876691169}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: onAccessDenied.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 1
