@@ -22,6 +22,7 @@ public class MouseLookAround : MonoBehaviour
     public ClockScript clockScript;
     public NotebookScript notebookScript;
     public WireBoxScript wireboxScript;
+    public MorseScript morseScript;
 
     public bool cameraPaused = false;
 
@@ -43,6 +44,7 @@ public class MouseLookAround : MonoBehaviour
         clockScript = FindObjectOfType<ClockScript>();
         notebookScript = FindObjectOfType<NotebookScript>();
         wireboxScript = FindObjectOfType<WireBoxScript>();
+        morseScript = FindObjectOfType<MorseScript>();
     }
 
     void Update()
@@ -177,6 +179,17 @@ public class MouseLookAround : MonoBehaviour
                 
             //    clockScript.DisableInteraction();
             //    keypadScript.DisableInteraction();
+                morseScript.DisableInteraction();
+            }
+            else if (morseScript != null && morseScript.inFront)
+            {
+                rotationX = initialRotation.x;
+                rotationY = initialRotation.y;
+                transform.localEulerAngles = initialRotation;
+                
+            //    clockScript.DisableInteraction();
+            //    keypadScript.DisableInteraction();
+                wireboxScript.DisableInteraction();
             }
             else
             {
@@ -210,6 +223,10 @@ public class MouseLookAround : MonoBehaviour
                 {
                     clockScript.EnableInteraction();
                     notebookScript.EnableInteraction();
+                }
+                else if(currentScene.name == "Room 4 - Malachowsky Hall"){
+                    morseScript.EnableInteraction();
+                    wireboxScript.EnableInteraction();
                 }
                 keypadScript.EnableInteraction();
             }
