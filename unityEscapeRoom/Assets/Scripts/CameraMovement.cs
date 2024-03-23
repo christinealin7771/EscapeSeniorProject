@@ -23,6 +23,7 @@ public class MouseLookAround : MonoBehaviour
     public NotebookScript notebookScript;
     public WireBoxScript wireboxScript;
     public MorseScript morseScript;
+    public TVScript tvScript;
 
     public bool cameraPaused = false;
 
@@ -45,6 +46,7 @@ public class MouseLookAround : MonoBehaviour
         notebookScript = FindObjectOfType<NotebookScript>();
         wireboxScript = FindObjectOfType<WireBoxScript>();
         morseScript = FindObjectOfType<MorseScript>();
+        tvScript = FindObjectOfType<TVScript>();
     }
 
     void Update()
@@ -108,6 +110,11 @@ public class MouseLookAround : MonoBehaviour
                 {
                     clockScript.DisableInteraction();
                     notebookScript.DisableInteraction();
+                }
+                else if(currentScene.name == "Room 4 - Malachowsky Hall"){
+                    morseScript.DisableInteraction();
+                    wireboxScript.DisableInteraction();
+                    tvScript.DisableInteraction();
                 }
             }
             else if (paintingScript != null && paintingScript.inFront)
@@ -180,6 +187,7 @@ public class MouseLookAround : MonoBehaviour
             //    clockScript.DisableInteraction();
             //    keypadScript.DisableInteraction();
                 morseScript.DisableInteraction();
+                tvScript.DisableInteraction();
             }
             else if (morseScript != null && morseScript.inFront)
             {
@@ -189,7 +197,15 @@ public class MouseLookAround : MonoBehaviour
                 
             //    clockScript.DisableInteraction();
             //    keypadScript.DisableInteraction();
+                tvScript.DisableInteraction();
                 wireboxScript.DisableInteraction();
+            }
+            else if(tvScript != null && tvScript.inFront){
+                rotationX = initialRotation.x;
+                rotationY = initialRotation.y;
+                transform.localEulerAngles = initialRotation;
+                wireboxScript.DisableInteraction();
+                morseScript.DisableInteraction();
             }
             else
             {
@@ -227,6 +243,7 @@ public class MouseLookAround : MonoBehaviour
                 else if(currentScene.name == "Room 4 - Malachowsky Hall"){
                     morseScript.EnableInteraction();
                     wireboxScript.EnableInteraction();
+                    tvScript.EnableInteraction();
                 }
                 keypadScript.EnableInteraction();
             }
