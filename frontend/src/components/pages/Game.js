@@ -45,6 +45,14 @@ const Game = () => {
     setEscapeTime(userEscapeTime)
     console.log(username)
     console.log(userEscapeTime)
+    axios.put(process.env.REACT_APP_UPDATE_ESCAPE_TIME, {username: username, escapeTime: userEscapeTime})
+    .then((response) => {
+      console.log(response)
+    })
+    .catch((e) => {
+      console.log(e)
+    })
+
   }, []);
 
   useEffect(() => {

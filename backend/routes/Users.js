@@ -12,7 +12,7 @@ router.post('/addUser', (req, res) => {
         else {
             const newUser = new Users({
                 username: req.body.username,
-                escapeTime: "00:00:00",
+                escapeTime: "0",
             })
 
             await newUser.save()
@@ -33,8 +33,8 @@ router.post('/addUser', (req, res) => {
     });
 });
 
-router.put("/updatetime/:username", async (req, res) => {
-    const username = req.params.username
+router.put("/updatetime", async (req, res) => {
+    const username = req.body.username
 	Users.findOneAndUpdate({username: username}, {escapeTime: req.body.escapeTime})
     .then((response) => {
         if(response == null){
