@@ -20,15 +20,44 @@ const Leaderboard = () => {
         })
     })
 
+    const secondsToTime =(secondsStr)=> {
+        // Parse seconds from the input string
+        const seconds = parseFloat(secondsStr.split(' ')[0]);
+    
+        // Convert seconds to hours, minutes, and seconds
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        const remainingSeconds = Math.floor(seconds % 60);
+    
+        // Format hours, minutes, and seconds to HH:MM:SS format
+        const formattedTime = [
+            hours.toString().padStart(2, '0'),
+            minutes.toString().padStart(2, '0'),
+            remainingSeconds.toString().padStart(2, '0')
+        ].join(':');
+    
+        return formattedTime;
+    }
+
     const getTopFiveFastestTimes = (userData) => {
         const data = userData
-        data.forEach(obj => {
-            const timeComponents = obj.escapeTime.split(':').map(Number);
-            obj.escapeSeconds = timeComponents[0] * 3600 + timeComponents[1] * 60 + timeComponents[2];
-        });
-    
+
         // Sort the objects based on escapeSeconds
-        data.sort((a, b) => a.escapeSeconds - b.escapeSeconds);
+        data.sort((a, b) => a.escapeTime - b.escapeTime);
+
+        // data.forEach(obj => {
+        //     const convertedTime = secondsToTime(obj.escapeTime)
+        //     obj.newTime = convertedTime
+        // })
+
+        // data.forEach(obj => {
+        //     const convertedTime = secondsToTime(obj.escapeTime)
+        //     const timeComponents = obj.escapeTime.split(':').map(Number);
+        //     obj.escapeSeconds = timeComponents[0] * 3600 + timeComponents[1] * 60 + timeComponents[2];
+        // });
+    
+        // // Sort the objects based on escapeSeconds
+        // data.sort((a, b) => a.escapeSeconds - b.escapeSeconds);
     
         // Select the top five objects
         const topFive = data.slice(0, 5);
@@ -82,7 +111,7 @@ const Leaderboard = () => {
                     {console.log(item)}
                     return (
                         <Card.Text style={{color: "black"}} className="font-weight-bold">
-                            {index+1}. {item.username} {item.escapeTime}
+                            {index+1}. {item.username} {secondsToTime(item.escapeTime)}
                         </Card.Text>
                     )
                 })
