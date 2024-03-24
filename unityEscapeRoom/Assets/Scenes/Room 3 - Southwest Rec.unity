@@ -3022,7 +3022,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7a7eba72a93764416af2e94c02aaf67c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6724,7 +6724,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5090dae25cb6f314abcf71afa17493b3, type: 2}
+  - {fileID: 2100000, guid: 671c9b8c6eb764491b5b21430a9b0a34, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9563,6 +9563,8 @@ MonoBehaviour:
   clockScript: {fileID: 0}
   notebookScript: {fileID: 0}
   wireboxScript: {fileID: 0}
+  morseScript: {fileID: 0}
+  tvScript: {fileID: 0}
   cameraPaused: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
