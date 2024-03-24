@@ -16,6 +16,7 @@ public class PlayerName : MonoBehaviour
     void Start()
     {
         
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame

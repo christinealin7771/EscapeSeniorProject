@@ -17,10 +17,10 @@ const Game = () => {
   }
 
   const { addEventListener, removeEventListener, unityProvider } = useUnityContext({
-    loaderUrl: "/Build/webglUnityEscapeRoomBuild.loader.js",
-    dataUrl: "/Build/webglUnityEscapeRoomBuild.data.unityweb",
-    frameworkUrl: "/Build/webglUnityEscapeRoomBuild.framework.js.unityweb",
-    codeUrl: "/Build/webglUnityEscapeRoomBuild.wasm.unityweb",
+    loaderUrl: "/Build/Assembly-CSharp.loader.js",
+    dataUrl: "/Build/Assembly-CSharp.data.unityweb",
+    frameworkUrl: "/Build/Assembly-CSharp.framework.js.unityweb",
+    codeUrl: "/Build/Assembly-CSharp.wasm.unityweb",
   });
 
   const handleCreateUser = useCallback((username) => {
@@ -36,10 +36,20 @@ const Game = () => {
   }, []);
 
   const updateUserEscapeTime = useCallback((username, userEscapeTime) => {
+    console.log(username)
+    console.log(userEscapeTime)
     setUsername(username)
     setEscapeTime(userEscapeTime)
     console.log(username)
     console.log(userEscapeTime)
+    axios.put(process.env.REACT_APP_UPDATE_ESCAPE_TIME, {username: username, escapeTime: userEscapeTime})
+    .then((response) => {
+      console.log(response)
+    })
+    .catch((e) => {
+      console.log(e)
+    })
+
   }, []);
 
   useEffect(() => {
