@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class MouseLookAround : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class MouseLookAround : MonoBehaviour
     public WireBoxScript wireboxScript;
     public MorseScript morseScript;
     public TVScript tvScript;
+    List<BackArrowScript> backArrowScripts = new List<BackArrowScript>();
 
     public bool cameraPaused = false;
 
@@ -47,6 +49,8 @@ public class MouseLookAround : MonoBehaviour
         wireboxScript = FindObjectOfType<WireBoxScript>();
         morseScript = FindObjectOfType<MorseScript>();
         tvScript = FindObjectOfType<TVScript>();
+        BackArrowScript[] backArrowScriptArray = FindObjectsOfType<BackArrowScript>();
+        backArrowScripts.AddRange(backArrowScriptArray);
     }
 
     void Update()
@@ -248,10 +252,68 @@ public class MouseLookAround : MonoBehaviour
                 keypadScript.EnableInteraction();
             }
         }
+        else
+        {
+            DisableAllInteractions();
+        }
     }
 
     public void ToggleCameraPause(bool pause)
     {
         cameraPaused = pause;
+        if (cameraPaused)
+        {
+            DisableAllInteractions();
+
+            foreach (BackArrowScript backArrowScript in backArrowScripts)
+            {
+                if (backArrowScript != null)
+                {
+                    backArrowScript.DisableInteraction();
+                }
+            }
+        }
+        else
+        {
+            // Enable interaction for all back arrow scripts when unpausing
+            foreach (BackArrowScript backArrowScript in backArrowScripts)
+            {
+                if (backArrowScript != null)
+                {
+                    backArrowScript.EnableInteraction();
+                }
+            }
+        }
     }
+
+    void DisableAllInteractions()
+    {
+        if (clipboardScript != null)
+            clipboardScript.DisableInteraction();
+        if (bookScript != null)
+            bookScript.DisableInteraction();
+        if (laptopScript != null)
+            laptopScript.DisableInteraction();
+        if (keypadScript != null)
+            keypadScript.DisableInteraction();
+        if (paintingScript != null)
+            paintingScript.DisableInteraction();
+        if (paletteScript != null)
+            paletteScript.DisableInteraction();
+        if (bowlscoreScript != null)
+            bowlscoreScript.DisableInteraction();
+        if (printerScript != null)
+            printerScript.DisableInteraction();
+        if (clockScript != null)
+            clockScript.DisableInteraction();
+        if (notebookScript != null)
+            notebookScript.DisableInteraction();
+        if (wireboxScript != null)
+            wireboxScript.DisableInteraction();
+        if (morseScript != null)
+            morseScript.DisableInteraction();
+        if (tvScript != null)
+            tvScript.DisableInteraction();
+    }
+
 }
