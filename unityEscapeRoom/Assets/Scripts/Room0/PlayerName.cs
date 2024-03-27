@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.Runtime.InteropServices;
 using UnityEngine.SceneManagement;
 
+
 public class PlayerName : MonoBehaviour
 {
     public string saveName;
@@ -35,6 +36,8 @@ public class PlayerName : MonoBehaviour
             StartGame (saveName);
         #endif
 
-        SceneManager.LoadScene("Room 1 - Marston");
+        int randomRoom = Random.Range(1, 4);   // creates a number between 1 and 3
+        SceneManager.LoadScene("Room 1." + randomRoom + " - Marston");
+
     }
 }
