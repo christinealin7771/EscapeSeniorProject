@@ -3925,7 +3925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: keypadCombo
-      value: 672
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: screenNormalColor.b
@@ -5102,7 +5102,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorLocked: 1
-  roomName: Room 2 - Reitz Union
+  roomNameList:
+  - Room 2.1 - Reitz Union
+  - Room 2.2 - Reitz Union
+  - Room 2.3 - Reitz Union
 --- !u!1 &1904176875
 GameObject:
   m_ObjectHideFlags: 0
@@ -5590,6 +5593,8 @@ MonoBehaviour:
   clockScript: {fileID: 0}
   notebookScript: {fileID: 0}
   wireboxScript: {fileID: 0}
+  morseScript: {fileID: 0}
+  tvScript: {fileID: 0}
   cameraPaused: 0
 --- !u!1001 &2143518279
 PrefabInstance:

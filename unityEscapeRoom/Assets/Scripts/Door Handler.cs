@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class DoorHandler : MonoBehaviour
 {
     public bool doorLocked;
-    public string roomName;
+    public string[] roomNameList;
     private Renderer _renderer;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,9 @@ public class DoorHandler : MonoBehaviour
         if (doorLocked == false) {
             Debug.Log(doorLocked);
             Debug.Log("Clicked on an unlocked door!");
-            SceneManager.LoadScene(roomName);
+
+            int randomRoom = Random.Range(0, 3);  // creates a number between 0 and 2
+            SceneManager.LoadScene(roomNameList[randomRoom]);   // loads one of the three possible rooms
         }
         else {
             Debug.Log(doorLocked);
