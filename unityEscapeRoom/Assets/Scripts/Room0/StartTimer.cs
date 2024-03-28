@@ -26,6 +26,7 @@ public class StartTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mouseLookScript = Camera.main.GetComponent<MouseLookAround>();
         if (gamePaused == false) {
             timer += Time.deltaTime; 
             // Debug.Log(timer);
