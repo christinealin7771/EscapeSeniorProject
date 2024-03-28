@@ -12,6 +12,8 @@ public class Clock : MonoBehaviour {
 	public GameObject pointerSeconds;
     public GameObject pointerMinutes;
     public GameObject pointerHours;
+
+    public AudioSource tickSound;
     
     //-- time speed factor
     public float clockSpeed = 1.0f;     // 1.0f = realtime, < 1.0f = slower, > 1.0f = faster
@@ -38,6 +40,7 @@ void Update()
     {
         msecs -= 1.0f;
         seconds++;
+        gameObject.GetComponent<AudioSource>().Play();
         if(seconds >= 60)
         {
             seconds = 0;
