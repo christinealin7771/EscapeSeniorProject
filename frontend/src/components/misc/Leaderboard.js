@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { Card, Button, Container, Col, Row } from 'react-bootstrap'
-import axios from "axios";
+import axios from 'axios'
 
 const Leaderboard = () => {
     const [users, setUsers] = useState([]);
@@ -10,7 +10,7 @@ const Leaderboard = () => {
     useEffect(() => {
         axios.get(process.env.REACT_APP_GET_ALL_USER_API_URL)
         .then((response) => {
-            console.log(response.data.allUsers)
+            // console.log(response.data.allUsers)
             setUsers(response.data.allUsers)
             setTopFive(getTopFiveFastestTimes(response.data.allUsers))
         })
@@ -20,15 +20,44 @@ const Leaderboard = () => {
         })
     })
 
+    const secondsToTime =(secondsStr)=> {
+        // Parse seconds from the input string
+        const seconds = parseFloat(secondsStr.split(' ')[0]);
+    
+        // Convert seconds to hours, minutes, and seconds
+        const hours = Math.floor(seconds / 3600);
+        const minutes = Math.floor((seconds % 3600) / 60);
+        const remainingSeconds = Math.floor(seconds % 60);
+    
+        // Format hours, minutes, and seconds to HH:MM:SS format
+        const formattedTime = [
+            hours.toString().padStart(2, '0'),
+            minutes.toString().padStart(2, '0'),
+            remainingSeconds.toString().padStart(2, '0')
+        ].join(':');
+    
+        return formattedTime;
+    }
+
     const getTopFiveFastestTimes = (userData) => {
         const data = userData
-        data.forEach(obj => {
-            const timeComponents = obj.escapeTime.split(':').map(Number);
-            obj.escapeSeconds = timeComponents[0] * 3600 + timeComponents[1] * 60 + timeComponents[2];
-        });
-    
+
         // Sort the objects based on escapeSeconds
-        data.sort((a, b) => a.escapeSeconds - b.escapeSeconds);
+        data.sort((a, b) => a.escapeTime - b.escapeTime);
+
+        // data.forEach(obj => {
+        //     const convertedTime = secondsToTime(obj.escapeTime)
+        //     obj.newTime = convertedTime
+        // })
+
+        // data.forEach(obj => {
+        //     const convertedTime = secondsToTime(obj.escapeTime)
+        //     const timeComponents = obj.escapeTime.split(':').map(Number);
+        //     obj.escapeSeconds = timeComponents[0] * 3600 + timeComponents[1] * 60 + timeComponents[2];
+        // });
+    
+        // // Sort the objects based on escapeSeconds
+        // data.sort((a, b) => a.escapeSeconds - b.escapeSeconds);
     
         // Select the top five objects
         const topFive = data.slice(0, 5);
@@ -36,19 +65,53 @@ const Leaderboard = () => {
         return topFive;
     }
 
+    // Styling
+    const cardStyle = {
+        background:'#90AACB',
+        width: '410px', 
+        border: '8px solid #D5D6D6',
+        borderRadius: '50px',
+        fontSize: '26px',
+        fontFamily: "'Anton', sans-serif",
+        color: '#90AACB',
+        justifyContent: 'center',
+        alignItems: 'center',
+    };
+
+    const leaderboardTitle = {
+        width: '300px',
+        height: '80px',
+        background:'#D5D6D6',
+        border: '8px solid #D5D6D6',
+        borderRadius: '50px',
+        fontSize: '40px',
+        fontFamily: "'Anton', sans-serif",
+        fontStyle: 'italic',
+        color: 'rgb(48, 86, 132)',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        marginTop: '-30px',
+        textAlign: 'center',
+    }
+
   return (
     <>
-    <Card className="text-center" style={{ width: '35rem', backgroundColor: '#FCC490', border: 'none'}}>
+
+    <Container>
+    <Card style={cardStyle}>
+
+        <div style={leaderboardTitle}>
+        <p>LEADERBOARD</p>
+        </div>
+
         <Card.Body>
-            <Card.Title className="font-weight-bold" style={{padding: '20px'}}>
-                Leaderboard
-            </Card.Title>
             {
                 topFive.map((item, index) => {
-
+                    {console.log(item)}
                     return (
-                        <Card.Text className="font-weight-bold">
-                            {index+1}. {item.username} {item.escapeTime}
+                        <Card.Text style={{color: "black"}} className="font-weight-bold">
+                            {index+1}. {item.username} {secondsToTime(item.escapeTime)}
                         </Card.Text>
                     )
                 })
@@ -56,25 +119,9 @@ const Leaderboard = () => {
 
         </Card.Body>
     </Card>
+    </Container>
     </>
   )
 }
 
 export default Leaderboard
-
-
-// <Card.Text className="font-weight-bold">
-// 1. Bobby   00:00:00
-// </Card.Text>
-// <Card.Text className="font-weight-bold">
-// 2. Bobby   00:00:00
-// </Card.Text>
-// <Card.Text className="font-weight-bold">
-// 3. Bobby   00:00:00
-// </Card.Text>
-// <Card.Text className="font-weight-bold">
-// 4. Bobby   00:00:00
-// </Card.Text>
-// <Card.Text className="font-weight-bold">
-// 5. Bobby   00:00:00
-// </Card.Text>
