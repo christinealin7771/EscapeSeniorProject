@@ -51,6 +51,7 @@ public class StartTimer : MonoBehaviour
 
     public void PauseTime()
     {
+        Debug.Log("Clicked Pause");
         gamePaused = !gamePaused;
         pauseMenuObject.SetActive(gamePaused);
         pauseButtonObject.SetActive(!gamePaused);
@@ -69,9 +70,9 @@ public class StartTimer : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
-    {
-        Debug.Log("Clicked Pause");
-        gamePaused = !gamePaused;
-    }
+    // void OnMouseDown()
+    // {
+    //     Debug.Log("Clicked Pause");
+    //     gamePaused = !gamePaused;
+    // }
 }
