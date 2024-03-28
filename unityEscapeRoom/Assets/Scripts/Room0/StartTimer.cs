@@ -12,8 +12,12 @@ public class StartTimer : MonoBehaviour
     public GameObject pauseMenuObject;
     public GameObject pauseButtonObject;
     public GameObject hintButtonObject;
+    public GameObject muteObject;
+    public GameObject musicObject;
+    public GameObject AudioObject;
 
     private MouseLookAround mouseLookScript;
+
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +55,13 @@ public class StartTimer : MonoBehaviour
         pauseMenuObject.SetActive(gamePaused);
         pauseButtonObject.SetActive(!gamePaused);
         hintButtonObject.SetActive(!gamePaused);
+
+        if (AudioObject.GetComponent<AudioManagerScript>().pauseMusic){
+            musicObject.SetActive(!gamePaused);
+        }
+        else {
+            muteObject.SetActive(!gamePaused);
+        }
 
         if(mouseLookScript != null)
         {

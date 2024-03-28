@@ -9,6 +9,9 @@ public class HintMenu : MonoBehaviour
     public GameObject hintMenuObject;
     public GameObject hintButtonObject;
     public GameObject pauseButtonObject;
+    public GameObject muteObject;
+    public GameObject musicObject;
+    public GameObject AudioObject;
 
     public TMPro.TextMeshProUGUI[] hintTextObjects;
     // Start is called before the first frame update
@@ -29,9 +32,20 @@ public class HintMenu : MonoBehaviour
     public void hintClickedFunc()
     {
         hintClicked = !hintClicked;
+
         hintMenuObject.SetActive(hintClicked);
         hintButtonObject.SetActive(!hintClicked);
         pauseButtonObject.SetActive(!hintClicked);
+
+        if (AudioObject.GetComponent<AudioManagerScript>().pauseMusic){
+            musicObject.SetActive(!hintClicked);
+        }
+        else {
+            muteObject.SetActive(!hintClicked);
+        }
+        
+        
+        // pauseMusic.pauseGame();
 
         for (int i = 0; i < 3; i++) {
             hintTextObjects[i].text = "Hint " + (i+1).ToString();
