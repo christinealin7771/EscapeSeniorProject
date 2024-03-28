@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class StartTimer : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class StartTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timer = 0;
         DontDestroyOnLoad(gameObject);
         pauseMenuObject.SetActive(false);
 
@@ -26,6 +28,7 @@ public class StartTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerPrefs.SetString("escapeTime", Convert.ToString(timer));
         mouseLookScript = Camera.main.GetComponent<MouseLookAround>();
         if (gamePaused == false) {
             timer += Time.deltaTime; 

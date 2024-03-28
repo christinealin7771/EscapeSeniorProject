@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6666,7 +6666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ClickToRoom4, Assembly-CSharp
+      value: DoorHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -7672,10 +7672,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1835098550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eadb3d1ea7b799f4289f4db8cdcddd85, type: 3}
+  m_Script: {fileID: 11500000, guid: 06e8469a9fb2b6e498ed624c631563fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doorLocked: 1
+  roomNameList:
+  - Room 4 - Malachowsky Hall
 --- !u!1001 &1858398610
 PrefabInstance:
   m_ObjectHideFlags: 0
