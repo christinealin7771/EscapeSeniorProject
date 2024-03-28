@@ -40,7 +40,7 @@ const Leaderboard = () => {
     }
 
     const getTopFiveFastestTimes = (userData) => {
-        const data = userData
+        const data = userData.filter(obj => obj.escapeTime !== "0");
 
         // Sort the objects based on escapeSeconds
         data.sort((a, b) => a.escapeTime - b.escapeTime);
