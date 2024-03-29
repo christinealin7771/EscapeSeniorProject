@@ -25,6 +25,10 @@ public class MouseLookAround : MonoBehaviour
     public WireBoxScript wireboxScript;
     public MorseScript morseScript;
     public TVScript tvScript;
+    public CaesarBookScript cBookScript;
+    public CaesarPictureScript cPictureScript;
+    public MusicBookScript mBookScript;
+    public MusicSheetScript mChartScript;
     List<BackArrowScript> backArrowScripts = new List<BackArrowScript>();
 
     public bool cameraPaused = false;
@@ -49,6 +53,10 @@ public class MouseLookAround : MonoBehaviour
         wireboxScript = FindObjectOfType<WireBoxScript>();
         morseScript = FindObjectOfType<MorseScript>();
         tvScript = FindObjectOfType<TVScript>();
+        cBookScript = FindObjectOfType<CaesarBookScript>();
+        cPictureScript = FindObjectOfType<CaesarPictureScript>();
+        mBookScript = FindObjectOfType<MusicBookScript>();
+        mChartScript = FindObjectOfType<MusicSheetScript>();
         BackArrowScript[] backArrowScriptArray = FindObjectsOfType<BackArrowScript>();
         backArrowScripts.AddRange(backArrowScriptArray);
     }
@@ -119,6 +127,12 @@ public class MouseLookAround : MonoBehaviour
                     morseScript.DisableInteraction();
                     wireboxScript.DisableInteraction();
                     tvScript.DisableInteraction();
+                }
+                else if(currentScene.name == "Room 5 - Century Tower"){
+                    cBookScript.DisableInteraction();
+                    cPictureScript.DisableInteraction();
+                    mBookScript.DisableInteraction();
+                    mChartScript.DisableInteraction();
                 }
             }
             else if (paintingScript != null && paintingScript.inFront)
@@ -211,6 +225,38 @@ public class MouseLookAround : MonoBehaviour
                 wireboxScript.DisableInteraction();
                 morseScript.DisableInteraction();
             }
+            else if(cBookScript != null && cBookScript.inFront){
+                rotationX = initialRotation.x;
+                rotationY = initialRotation.y;
+                transform.localEulerAngles = initialRotation;
+                cPictureScript.DisableInteraction();
+                mBookScript.DisableInteraction();
+                mChartScript.DisableInteraction();
+            }
+            else if(cPictureScript != null && cPictureScript.inFront){
+                rotationX = initialRotation.x;
+                rotationY = initialRotation.y;
+                transform.localEulerAngles = initialRotation;
+                cBookScript.DisableInteraction();
+                mBookScript.DisableInteraction();
+                mChartScript.DisableInteraction();
+            }
+            else if(mBookScript != null && mBookScript.inFront){
+                rotationX = initialRotation.x;
+                rotationY = initialRotation.y;
+                transform.localEulerAngles = initialRotation;
+                cBookScript.DisableInteraction();
+                cPictureScript.DisableInteraction();
+                mChartScript.DisableInteraction();
+            }
+            else if(mChartScript != null && mChartScript.inFront){
+                rotationX = initialRotation.x;
+                rotationY = initialRotation.y;
+                transform.localEulerAngles = initialRotation;
+                cBookScript.DisableInteraction();
+                cPictureScript.DisableInteraction();
+                mBookScript.DisableInteraction();
+            }
             else
             {
                 rotationY += Input.GetAxis("Mouse X") * sensitivity;
@@ -248,6 +294,12 @@ public class MouseLookAround : MonoBehaviour
                     morseScript.EnableInteraction();
                     wireboxScript.EnableInteraction();
                     tvScript.EnableInteraction();
+                }
+                else if(currentScene.name == "Room 5 - Century Tower"){
+                    cBookScript.EnableInteraction();
+                    cPictureScript.EnableInteraction();
+                    mBookScript.EnableInteraction();
+                    mChartScript.EnableInteraction();
                 }
                 keypadScript.EnableInteraction();
             }
@@ -314,6 +366,14 @@ public class MouseLookAround : MonoBehaviour
             morseScript.DisableInteraction();
         if (tvScript != null)
             tvScript.DisableInteraction();
+        if (cPictureScript != null)
+            cPictureScript.DisableInteraction();
+        if (cBookScript != null)
+            cBookScript.DisableInteraction();
+        if (mBookScript != null)
+            mBookScript.DisableInteraction();
+        if (mChartScript != null)
+            mChartScript.DisableInteraction();
     }
 
 }

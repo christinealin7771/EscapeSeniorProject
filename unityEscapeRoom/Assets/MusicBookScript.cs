@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TVScript : MonoBehaviour
+public class MusicBookScript : MonoBehaviour
 {
-    public Transform target;
+public Transform target;
     public float speed;
     private bool moving = false;
     private bool moving2 = false;
@@ -18,21 +18,21 @@ public class TVScript : MonoBehaviour
     private Quaternion originalRot;
 
     private Vector3 newRot;
-    public Vector3 tvVector;
+    public Vector3 mBookVector;
     // Start is called before the first frame update
     void Start()
     {
         originalPos = transform.position;
         originalRot = transform.rotation;
     //    originalRot = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
-        GameObject.Find("Tv_Back_Button").GetComponent<Renderer>().enabled = false;
+        GameObject.Find("mStand_Back_Button").GetComponent<Renderer>().enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         MoveToFront();
-        if (GameObject.Find("Tv_Back_Button").GetComponent<BackArrowScript>().backButtonClicked) {
+        if (GameObject.Find("mStand_Back_Button").GetComponent<BackArrowScript>().backButtonClicked) {
             Debug.Log("Back button clicked again");
             if(inFront)
             {
@@ -60,15 +60,15 @@ public class TVScript : MonoBehaviour
 
     void MoveToFront() {
         if(moving == true){
-            transform.position = Vector3.MoveTowards(transform.position, target.position + target.forward + tvVector, speed);
+            transform.position = Vector3.MoveTowards(transform.position, target.position + target.forward + mBookVector, speed);
             transform.right = target.position - target.position;
             newRot = new Vector3(target.rotation.x + rotX, target.rotation.y + rotY, target.rotation.z + rotZ);
             transform.eulerAngles = newRot;
-            if(transform.position == target.position + target.forward + tvVector){
+            if(transform.position == target.position + target.forward + mBookVector){
                 moving = false;
                 inFront = true;                
                 
-                GameObject.Find("Tv_Back_Button").GetComponent<Renderer>().enabled = true;
+                GameObject.Find("mStand_Back_Button").GetComponent<Renderer>().enabled = true;
             }
             
         }   
@@ -84,8 +84,8 @@ public class TVScript : MonoBehaviour
                 
                 moving2 = false;
                 inFront = false;
-                GameObject.Find("Tv_Back_Button").GetComponent<BackArrowScript>().backButtonClicked = false;
-                GameObject.Find("Tv_Back_Button").GetComponent<Renderer>().enabled = false;
+                GameObject.Find("mStand_Back_Button").GetComponent<BackArrowScript>().backButtonClicked = false;
+                GameObject.Find("mStand_Back_Button").GetComponent<Renderer>().enabled = false;
                 //transform.eulerAngles = originalRot;    
             }
 
