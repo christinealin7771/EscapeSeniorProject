@@ -21,7 +21,7 @@ public class DoorHandler : MonoBehaviour
             Debug.Log(doorLocked);
             Debug.Log("Clicked on an unlocked door!");
 
-            int randomRoom = Random.Range(0, 3);  // creates a number between 0 and 2
+            int randomRoom = Random.Range(0, roomNameList.Length);  // creates a number between 0 and 2
             SceneManager.LoadScene(roomNameList[randomRoom]);   // loads one of the three possible rooms
         }
         else {

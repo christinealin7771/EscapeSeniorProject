@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Room 2.1 - Reitz Union.unity
     guid: fbd97c125abb5bd44a104af66198e7ac
   - enabled: 1
+    path: Assets/Scenes/Room 2.2 - Reitz Union.unity
+    guid: b48cbc732dd394dd9af7a44fcacbbfdd
+  - enabled: 1
+    path: Assets/Scenes/Room 2.3 - Reitz Union.unity
+    guid: 97c6a0d731fd144a493f98c5a8074525
+  - enabled: 1
     path: Assets/Scenes/Room 3 - Southwest Rec.unity
     guid: 042a3b3d124d9fe4a8713e1662bd0c54
   - enabled: 1

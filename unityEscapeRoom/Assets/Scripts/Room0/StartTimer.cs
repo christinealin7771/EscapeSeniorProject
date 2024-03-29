@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class StartTimer : MonoBehaviour
 {
@@ -11,12 +12,17 @@ public class StartTimer : MonoBehaviour
     public GameObject pauseMenuObject;
     public GameObject pauseButtonObject;
     public GameObject hintButtonObject;
+    public GameObject muteObject;
+    public GameObject musicObject;
+    public GameObject AudioObject;
 
     private MouseLookAround mouseLookScript;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        timer = 0;
         DontDestroyOnLoad(gameObject);
         pauseMenuObject.SetActive(false);
 
@@ -26,6 +32,7 @@ public class StartTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerPrefs.SetString("escapeTime", Convert.ToString(timer));
         mouseLookScript = Camera.main.GetComponent<MouseLookAround>();
         if (gamePaused == false) {
             timer += Time.deltaTime; 
@@ -44,10 +51,18 @@ public class StartTimer : MonoBehaviour
 
     public void PauseTime()
     {
+        Debug.Log("Clicked Pause");
         gamePaused = !gamePaused;
         pauseMenuObject.SetActive(gamePaused);
         pauseButtonObject.SetActive(!gamePaused);
         hintButtonObject.SetActive(!gamePaused);
+
+        if (AudioObject.GetComponent<AudioManagerScript>().pauseMusic){
+            musicObject.SetActive(!gamePaused);
+        }
+        else {
+            muteObject.SetActive(!gamePaused);
+        }
 
         if(mouseLookScript != null)
         {
@@ -55,9 +70,9 @@ public class StartTimer : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
-    {
-        Debug.Log("Clicked Pause");
-        gamePaused = !gamePaused;
-    }
+    // void OnMouseDown()
+    // {
+    //     Debug.Log("Clicked Pause");
+    //     gamePaused = !gamePaused;
+    // }
 }
