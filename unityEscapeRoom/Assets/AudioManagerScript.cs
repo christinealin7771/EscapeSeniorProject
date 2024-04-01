@@ -19,6 +19,8 @@ public class AudioManagerScript : MonoBehaviour
         MusicObject.SetActive(false);
         DontDestroyOnLoad(gameObject);
         MusicSource.clip = background;
+        MusicSource.loop = true;
+        MusicSource.volume = 0.333f;
         MusicSource.Play();
     }
 
@@ -28,6 +30,7 @@ public class AudioManagerScript : MonoBehaviour
         if (pauseMusic == true) {
             MusicSource.Pause();
         }
+        
 
         // if (pauseMusic == false){
         //     MusicSource.Play();
