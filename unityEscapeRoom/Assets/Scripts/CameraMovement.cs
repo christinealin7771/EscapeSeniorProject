@@ -105,13 +105,13 @@ public class MouseLookAround : MonoBehaviour
                 rotationY = initialRotation.y;
                 transform.localEulerAngles = initialRotation;
 
-                if (currentScene.name == "Room 1 - Marston")
+                if (currentScene.name == "Room 1.1 - Marston")
                 {
                     bookScript.DisableInteraction();
                     laptopScript.DisableInteraction();
                     paintingScript.DisableInteraction();
                 }
-                else if (currentScene.name == "Room 2 - Reitz Union")
+                else if (currentScene.name == "Room 2.1 - Reitz Union")
                 {
                     clipboardScript.DisableInteraction();
                     paletteScript.DisableInteraction();
@@ -272,13 +272,13 @@ public class MouseLookAround : MonoBehaviour
                     Debug.Log("You are in the YourSceneName scene.");
                 }
 
-                if (currentScene.name == "Room 1 - Marston")
+                if (currentScene.name == "Room 1.1 - Marston")
                 {
                     bookScript.EnableInteraction();
                     laptopScript.EnableInteraction();
                     paintingScript.EnableInteraction();
                 }
-                else if (currentScene.name == "Room 2 - Reitz Union")
+                else if (currentScene.name == "Room 2.1 - Reitz Union")
                 {
                     clipboardScript.EnableInteraction();
                     paletteScript.EnableInteraction();

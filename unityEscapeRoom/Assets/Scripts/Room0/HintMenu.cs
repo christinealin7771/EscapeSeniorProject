@@ -13,17 +13,23 @@ public class HintMenu : MonoBehaviour
     public GameObject musicObject;
     public GameObject AudioObject;
 
+
+    private MouseLookAround mouseLookScript;
+
     public TMPro.TextMeshProUGUI[] hintTextObjects;
     // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(gameObject);
         hintMenuObject.SetActive(false);
+
+        mouseLookScript = Camera.main.GetComponent<MouseLookAround>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        mouseLookScript = Camera.main.GetComponent<MouseLookAround>();
         // if (hintClicked == true) {
 
         // }
@@ -49,6 +55,11 @@ public class HintMenu : MonoBehaviour
 
         for (int i = 0; i < 3; i++) {
             hintTextObjects[i].text = "Hint " + (i+1).ToString();
+        }
+
+        if(mouseLookScript != null)
+        {
+            mouseLookScript.ToggleCameraPause(hintClicked);
         }
         
 
