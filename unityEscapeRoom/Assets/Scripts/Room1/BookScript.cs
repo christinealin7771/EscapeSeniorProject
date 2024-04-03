@@ -22,6 +22,7 @@ public class BookScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         Debug.Log("Started!");
         originalPos = transform.position;
     //    originalRot = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
@@ -33,6 +34,7 @@ public class BookScript : MonoBehaviour
     {
         if(!inFront && canInteract)
         {
+            
             Debug.Log("Clicked1!");
             if(moving == false){
                 moving = true;
@@ -45,6 +47,7 @@ public class BookScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         MoveToFront();
         if (GameObject.Find("Book_Back_Button").GetComponent<BackArrowScript>().backButtonClicked) {
             Debug.Log("Back button clicked again");
@@ -66,6 +69,7 @@ public class BookScript : MonoBehaviour
         if(moving == true){
             transform.position = Vector3.MoveTowards(transform.position, target.position + target.forward + bookVector, speed);
             transform.right = target.position - target.position;
+            FindObjectOfType<AudioManagerScript>().ClickedOn();
             newRot = new Vector3(target.rotation.x + rotX, target.rotation.y + rotY, target.rotation.z + rotZ);
             transform.eulerAngles = newRot;
             if(transform.position == target.position + target.forward + bookVector){

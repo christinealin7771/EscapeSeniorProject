@@ -59,32 +59,12 @@ public class KeyPadZoomScript : MonoBehaviour
             MoveToOriginalPosition();  
 
         }
-    /*    if(moving == true){
-            transform.position = Vector3.MoveTowards(transform.position, target.position + target.forward, speed);
-            transform.right = target.position - target.position;
-            newRot = new Vector3(target.rotation.x + rotX, target.rotation.y + rotY, target.rotation.z + rotZ);
-        //    transform.rotation = originalRot;
-            transform.eulerAngles = newRot;
-            if(transform.position == target.position + target.forward){
-                moving = false;
-                inFront = true;
-            }
-            
-        }    
-        if(moving2 == true){
-            transform.position = Vector3.MoveTowards(transform.position, originalPos, speed);
-            transform.eulerAngles = originalRot;
-            if(transform.position == originalPos){
-                moving2 = false;
-                inFront = false;
-            }
-            
-        } */
     } 
     void MoveToFront() {
         if(moving == true){
             transform.position = Vector3.MoveTowards(transform.position, target.position + target.forward + keypadVector, speed);
             transform.right = target.position - target.position;
+            FindObjectOfType<AudioManagerScript>().ClickedOn();
             newRot = new Vector3(target.rotation.x + rotX, target.rotation.y + rotY, target.rotation.z + rotZ);
             transform.eulerAngles = newRot;
             if(transform.position == target.position + target.forward + keypadVector){
