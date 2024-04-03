@@ -2,10 +2,11 @@ import React, {useState, useCallback,  useEffect} from 'react'
 import { Unity, useUnityContext } from "react-unity-webgl";
 import axios from "axios";
 import Footer from '../Footer';
-import { Dropdown, Container, Form, Row, Col, Tab, Tabs } from 'react-bootstrap'
+import { Dropdown, Container, Form, Row, Col, Tab, Tabs, Button } from 'react-bootstrap'
 import TextBox from '../misc/textBox';
 import Calculator from '../misc/Calculator';
 import './Game.css'
+import Converter from '../misc/Converter';
 
 const Game = () => {
 
@@ -82,9 +83,9 @@ const Game = () => {
     <>
     <div align="center">
 
-        <h1 style={{ paddingTop: '2.5rem', fontFamily: "'Anton', sans-serif", color:'#000000'}}>Difficulty:</h1>
+        <h1 style={{ paddingTop: '2.5rem', fontFamily: "'Anton', sans-serif", color:'#000000'}}>Escape if you can!</h1>
 
-        <Dropdown onSelect={handleSelect} data-bs-theme="dark">
+        {/* <Dropdown onSelect={handleSelect} data-bs-theme="dark">
           <Dropdown.Toggle variant="secondary">
           {Difficulty || 'Select Difficulty'}
           </Dropdown.Toggle>
@@ -94,36 +95,40 @@ const Game = () => {
             <Dropdown.Item eventKey="Medium">Medium</Dropdown.Item>
             <Dropdown.Item eventKey="Hard">Hard</Dropdown.Item>
           </Dropdown.Menu>
-        </Dropdown>
+        </Dropdown> */}
     
-      <Container>
-        <Row className="justify-content-center">
+        <Container fluid>
+            <Row className="justify-content-center">
+                <Col xs={12} sm={12} md={10} lg={9}>
 
-          <Col xs={12} sm={12} md={10} lg={9}>
-            <div style={gameStyle}>
-            <Unity unityProvider={unityProvider} style={{ width: '100%', height: '100%' }} />
-            </div>
-          </Col>
+                    <div style={gameStyle}>
+                        <Unity unityProvider={unityProvider} style={{ width: '100%', height: '100%' }} />
+                    </div>
+                    <Button onClick={handleFullScreenClick} style={{backgroundColor:"rgb(48, 86, 132)", border:'none', marginTop:'-120px'}}>Enter Fullscreen</Button>
+                    
+                </Col>
+                <Col xs={8} sm={8} md={8} lg={3} style={{ paddingTop: '2rem', paddingBottom: '5rem' }}>
+                    <Tabs
+                        id="controlled-tab-example"
+                        activeKey={key}
+                        onSelect={(k) => setKey(k)}
+                        className="mb-3 custom-tabs"
+                    >
+                        <Tab eventKey="Notepad" title="Notepad">
+                            <TextBox />
+                        </Tab>
+                        <Tab eventKey="Calculator" title="Calculator">
+                            <Calculator />
+                        </Tab>
+                        <Tab eventKey="Converter" title="Converter">
+                            <Converter />
+                        </Tab>
+                    </Tabs>
+                </Col>
+            </Row>
+        </Container>
 
-          <Col xs={8} sm={8} md={8} lg={3} style={{paddingTop:'2rem', paddingBottom:'5rem'}}>
-            <Tabs
-              id="controlled-tab-example"
-              activeKey={key}
-              onSelect={(k) => setKey(k)}
-              className="mb-3 custom-tabs"
-            >
-              <Tab eventKey="Notepad" title="Notepad">
-                <TextBox/>
-              </Tab>
-              <Tab eventKey="Calculator" title="Calculator">
-                <Calculator/>
-              </Tab>
-            </Tabs>
-          </Col>
-
-        </Row>
-      </Container>
-      <button style={{marginBottom: "5rem"}} onClick={handleFullScreenClick}>Enter Fullscreen</button>
+      {/* <button style={{marginBottom: "5rem"}} onClick={handleFullScreenClick}>Enter Fullscreen</button> */}
     </div>
 
     <Footer/>
