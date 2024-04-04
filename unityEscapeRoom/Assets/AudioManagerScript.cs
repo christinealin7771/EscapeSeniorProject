@@ -16,6 +16,9 @@ public class AudioManagerScript : MonoBehaviour
 
     void Start()
     {
+        SFXSource.clip = clickSound;
+        SFXSource.volume = 0.333f;
+
         MusicObject.SetActive(false);
         DontDestroyOnLoad(gameObject);
         MusicSource.clip = background;
@@ -30,6 +33,7 @@ public class AudioManagerScript : MonoBehaviour
         if (pauseMusic == true) {
             MusicSource.Pause();
         }
+        
         
 
         // if (pauseMusic == false){
@@ -52,6 +56,10 @@ public class AudioManagerScript : MonoBehaviour
         if (!pauseMusic){
             MusicSource.Play();
         }
+    }
+
+    public void ClickedOn(){
+        SFXSource.Play();
     }
 
 }
