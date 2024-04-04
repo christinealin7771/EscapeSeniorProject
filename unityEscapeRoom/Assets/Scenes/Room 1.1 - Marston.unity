@@ -1311,6 +1311,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353049304}
   m_CullTransparentMesh: 1
+--- !u!4 &391696576 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 15fe17ccb731e144dabad5faf848cc5b, type: 3}
+  m_PrefabInstance: {fileID: 71110949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &392712048
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -6225,9 +6230,6 @@ PrefabInstance:
       addedObject: {fileID: 1922552265}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 58a43808d7681504da88f6898c182e81, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7352091}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 58a43808d7681504da88f6898c182e81, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 429844715}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 58a43808d7681504da88f6898c182e81, type: 3}
       insertIndex: -1
@@ -6235,6 +6237,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 58a43808d7681504da88f6898c182e81, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1824991434}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 58a43808d7681504da88f6898c182e81, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 391696576}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58a43808d7681504da88f6898c182e81, type: 3}
 --- !u!1 &1904176875
@@ -6936,3 +6941,4 @@ SceneRoots:
   - {fileID: 1333529659}
   - {fileID: 2067004785}
   - {fileID: 1846318294}
+  - {fileID: 71110949}
