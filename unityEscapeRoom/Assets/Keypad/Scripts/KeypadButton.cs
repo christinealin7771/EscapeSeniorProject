@@ -13,18 +13,18 @@ namespace NavKeypad
         [SerializeField] private float buttonPressedTime = 0.1f;
         [Header("Component References")]
         [SerializeField] private Keypad keypad;
-
+        private bool canInteract = true;
 
         public void PressButton()
         {
-            if (!moving)
+            if (!moving && canInteract)
             {
                 keypad.AddInput(value);
                 StartCoroutine(MoveSmooth());
             }
         }
         private bool moving;
-
+        
         private IEnumerator MoveSmooth()
         {
 
@@ -61,5 +61,16 @@ namespace NavKeypad
 
             moving = false;
         }
+
+        public void DisableInteraction()
+        {
+            canInteract = false;
+        }
+
+        public void EnableInteraction()
+        {
+            canInteract = true;
+        }
+
     }
 }

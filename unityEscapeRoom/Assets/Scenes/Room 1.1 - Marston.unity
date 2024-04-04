@@ -6829,7 +6829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ceb8ba296059147bf5d21bc08d09af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 2
+  sensitivity: 1
   initialRotation: {x: 0, y: 180, z: 0}
   clipboardScript: {fileID: 0}
   bookScript: {fileID: 0}

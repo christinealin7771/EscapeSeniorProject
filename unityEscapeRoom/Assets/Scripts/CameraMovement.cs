@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using NavKeypad;
 
 public class MouseLookAround : MonoBehaviour
 {
     float rotationX = 0f;
     float rotationY = 0f;
 
-    public float sensitivity = 10.0f;
+    private float sensitivity = 1.0f;
     public Vector3 initialRotation = new Vector3(0f, 180f, 0f); // Initial starting rotation
 
     Scene currentScene;
@@ -30,6 +31,7 @@ public class MouseLookAround : MonoBehaviour
     public MusicBookScript mBookScript;
     public MusicSheetScript mChartScript;
     List<BackArrowScript> backArrowScripts = new List<BackArrowScript>();
+    List<KeypadButton> keypadButtons = new List<KeypadButton>();
 
     public bool cameraPaused = false;
 
@@ -59,6 +61,9 @@ public class MouseLookAround : MonoBehaviour
         mChartScript = FindObjectOfType<MusicSheetScript>();
         BackArrowScript[] backArrowScriptArray = FindObjectsOfType<BackArrowScript>();
         backArrowScripts.AddRange(backArrowScriptArray);
+        KeypadButton[] keypadButtonArray = FindObjectsOfType<KeypadButton>();
+        keypadButtons.AddRange(keypadButtonArray);
+
     }
 
     void Update()
@@ -317,6 +322,16 @@ public class MouseLookAround : MonoBehaviour
         {
             DisableAllInteractions();
 
+            // Disable interaction for all keypad buttons when pausing
+            foreach (KeypadButton keypadButton in keypadButtons)
+            {
+                if (keypadButton != null)
+                {
+                    keypadButton.DisableInteraction();
+                }
+            }
+
+            // Disable interaction for all back arrow scripts when pausing
             foreach (BackArrowScript backArrowScript in backArrowScripts)
             {
                 if (backArrowScript != null)
@@ -327,6 +342,15 @@ public class MouseLookAround : MonoBehaviour
         }
         else
         {
+            // Enable interaction for all keypad buttons when unpausing
+            foreach (KeypadButton keypadButton in keypadButtons)
+            {
+                if (keypadButton != null)
+                {
+                    keypadButton.EnableInteraction();
+                }
+            }
+
             // Enable interaction for all back arrow scripts when unpausing
             foreach (BackArrowScript backArrowScript in backArrowScripts)
             {
@@ -375,5 +399,4 @@ public class MouseLookAround : MonoBehaviour
         if (mChartScript != null)
             mChartScript.DisableInteraction();
     }
-
 }
