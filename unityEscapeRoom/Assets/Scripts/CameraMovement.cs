@@ -8,7 +8,7 @@ public class MouseLookAround : MonoBehaviour
     float rotationX = 0f;
     float rotationY = 0f;
 
-    private float sensitivity = 1.0f;
+    private float sensitivity = 1.5f;
     public Vector3 initialRotation = new Vector3(0f, 180f, 0f); // Initial starting rotation
 
     Scene currentScene;

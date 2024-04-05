@@ -22,6 +22,6 @@ public class Feedback_button_temporary : MonoBehaviour
 
     public void openFeedback(){
         Debug.Log("clicked");
-        Application.OpenURL("https://forms.gle/EpiGBa6kpgc7NoqM8");
+        Application.OpenURL("https://forms.gle/HQxgPHMdUHAZ7Z9R7");
     }
 }
