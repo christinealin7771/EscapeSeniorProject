@@ -43,7 +43,7 @@ public class WireBoxScript : MonoBehaviour
 
     private void OnMouseDown() 
     {
-        if(!inFront && canInteract)
+        if(!inFront && canInteract && moving2 == false)
         {
             Debug.Log("Clicked1!");
             if(moving == false){
@@ -57,7 +57,7 @@ public class WireBoxScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inFront){
+        if(inFront && moving == false){
             GameObject.Find("WireBox").GetComponent<BoxCollider>().enabled = false;
             for(int i = 0; i < 20; i++){
                 Wires[i].GetComponent<LineRenderer>().enabled = true;

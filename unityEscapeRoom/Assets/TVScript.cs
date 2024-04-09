@@ -48,7 +48,7 @@ public class TVScript : MonoBehaviour
 
     private void OnMouseDown() 
     {
-        if(!inFront && canInteract)
+        if(!inFront && canInteract && moving2 == false)
         {
             Debug.Log("Clicked1!");
             if(moving == false){
