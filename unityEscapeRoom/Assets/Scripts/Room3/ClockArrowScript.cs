@@ -141,10 +141,10 @@ void Update()
     public void CheckTime() // Function called by the button
     {
         // Check if it's 1:15
-        if (hour == 2 && minutes == 5)
+        if (hour == 4 && minutes == 45)
         {
             reachedGoalTime = true;
-            Debug.Log("Reached 2:15!");
+            // Debug.Log("Reached 2:15!");
             popUpGameObject.SetActive(true);
             GameObject.Find("Submit_Button").GetComponent<Renderer>().enabled = false;
             upHourObject.GetComponent<Renderer>().enabled = false;
@@ -157,7 +157,7 @@ void Update()
         else
         {
             reachedGoalTime = false;
-            Debug.Log("Not yet reached 1:15!");
+            // Debug.Log("Not yet reached 1:15!");
             popUpGameObject.SetActive(false);
         }
 

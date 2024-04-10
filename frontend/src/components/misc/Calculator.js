@@ -107,7 +107,7 @@ const Calculator = () => {
 
   return (
     <>
-    <Container style={{backgroundColor: '#90AACB', borderRadius: '1rem', padding: '1rem', height:'58vh'}}>
+    <Container fluid style={{backgroundColor: '#90AACB', borderRadius: '1rem', padding: '1rem', height:'58vh'}}>
         <div className='wrapper'>
             <div className='screen'>{formattedInput || formattedPreState}</div>
 
