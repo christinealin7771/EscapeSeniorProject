@@ -88,17 +88,13 @@ const Leaderboard = () => {
         fontFamily: "'Anton', sans-serif",
         fontStyle: 'italic',
         color: 'rgb(48, 86, 132)',
-        justifyContent: 'center',
-        alignItems: 'center',
-        display: 'flex',
         marginTop: '-30px',
-        textAlign: 'center',
     }
 
   return (
     <>
 
-    <Container>
+ 
     <Card style={cardStyle}>
 
         <div style={leaderboardTitle}>
@@ -119,7 +115,7 @@ const Leaderboard = () => {
 
         </Card.Body>
     </Card>
-    </Container>
+
     </>
   )
 }

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react
 import CarouselPic from '../misc/Carousel';
 import Leaderboard from '../misc/Leaderboard';
 import placeholder from '../images/PlaceHolder.png';
+import Marston from '../images/rooms/Marston.png'
 import Footer from '../Footer';
 import TextBox from '../misc/textBox';
 import './Home.css';
@@ -28,20 +29,17 @@ const Home = () => {
           <p1 className="chomped">CHOMPED?</p1>
         </div>
         <Button as={Link} to="/game" style={compButtonStyle}>Play!</Button>
-        {/* <button as={Link} to="/game" style={compButtonStyle}>
-          <img src={gatorButton} alt="Button Image"/>
-        </button> */}
       </div>
 
-    <div className="bottom-section leaderboard d-flex align-items-center justify-content-center">
-    <Container>
-        <Row className='d-flex justify-content-center'>
-            <Col xs={12} sm={10} md={10} lg={6} style={{paddingTop: '30px'}}>
+    <div className="bottom-section leaderboard d-flex align-items-center ">
+    <Container fluid>
+        <Row className="justify-content-center">
+            <Col xs={12} sm={8} md={6} lg={4} style={{paddingTop: '30px'}}>
                 <Leaderboard/>
             </Col>
-            <Col xs={12} sm={10} md={10} lg={6} style={{paddingTop: '15px'}}>
+            <Col xs={12} sm={10} md={10} lg={7} style={{paddingTop: '15px'}}>
                 <Card>
-                    <Image src={placeholder} rounded />
+                    <CarouselPic/>
                 </Card>
             </Col>
         </Row>

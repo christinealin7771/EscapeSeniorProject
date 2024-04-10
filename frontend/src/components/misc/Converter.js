@@ -16,13 +16,17 @@ const Converter = () => {
         }
     };
 
+    function handleSubmit(e) {
+        e.preventDefault();
+    }
+
   return (
     <>
     <Container style={{backgroundColor: '#90AACB', borderRadius: '1rem', padding: '1rem', height:'58vh'}}>
         
-            <Form style={{marginTop:'40px'}}>
+            <Form style={{marginTop:'40px'}} onSubmit={handleSubmit}>
 
-            <h3>Binary to Decimal Convertor</h3>
+            <h3>Binary to Decimal Converter</h3>
             <Form.Control
                 type="text"
                 value={binary}

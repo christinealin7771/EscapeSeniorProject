@@ -7,6 +7,7 @@ import TextBox from '../misc/textBox';
 import Calculator from '../misc/Calculator';
 import './Game.css'
 import Converter from '../misc/Converter';
+import ModalInfo from '../misc/Infomation';
 
 const Game = () => {
 
@@ -84,19 +85,6 @@ const Game = () => {
     <div align="center">
 
         <h1 style={{ paddingTop: '2.5rem', fontFamily: "'Anton', sans-serif", color:'#000000'}}>Escape if you can!</h1>
-
-        {/* <Dropdown onSelect={handleSelect} data-bs-theme="dark">
-          <Dropdown.Toggle variant="secondary">
-          {Difficulty || 'Select Difficulty'}
-          </Dropdown.Toggle>
-
-          <Dropdown.Menu>
-            <Dropdown.Item eventKey="Easy">Easy</Dropdown.Item>
-            <Dropdown.Item eventKey="Medium">Medium</Dropdown.Item>
-            <Dropdown.Item eventKey="Hard">Hard</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown> */}
-    
         <Container fluid>
             <Row className="justify-content-center">
                 <Col xs={12} sm={12} md={10} lg={9}>
@@ -104,10 +92,13 @@ const Game = () => {
                     <div style={gameStyle}>
                         <Unity unityProvider={unityProvider} style={{ width: '100%', height: '100%' }} />
                     </div>
+
                     <Button onClick={handleFullScreenClick} style={{backgroundColor:"rgb(48, 86, 132)", border:'none', marginTop:'-120px'}}>Enter Fullscreen</Button>
-                    
+
+
                 </Col>
                 <Col xs={8} sm={8} md={8} lg={3} style={{ paddingTop: '2rem', paddingBottom: '5rem' }}>
+                <ModalInfo/>
                     <Tabs
                         id="controlled-tab-example"
                         activeKey={key}
