@@ -12,7 +12,7 @@ public class HintText : MonoBehaviour
     void Start()
     {
         sceneHintMap.Add("Room 1.1 - Marston", new string[] { "Look at the beautiful art!", "Enumerate the poem’s bright details.", "Technology may bring balance and order." });
-        sceneHintMap.Add("Room 2.1 - Reitz Union", new string[] { "Let's go bowling first! What's your score?", "What color connects it all?", "Minuses are important, not the color of them." });
+        sceneHintMap.Add("Room 2.1 - Reitz Union", new string[] { "Let's go bowling first! What's your score?", "What color connects it all?", "Never forget your math especially PEMDAS!" });
         sceneHintMap.Add("Room 3 - Southwest Rec", new string[] { "First you need a good workout…", "Time is of the essence!", "All about the numbers, look around the room." });
         sceneHintMap.Add("Room 4 - Malachowsky Hall", new string[] { "The wires have revealed something new/the paper is no longer torn (pick 1)", "Observe the sentence for something off.", "Look toward the calculator for a unique button." });
         sceneHintMap.Add("Room 5 - Century Tower", new string[] { "The Emperor has a hidden message for your eyes only…", "With the hidden rule, perform the song for the audience.", "Time is up! The clock’s ringing says it has ended." });
