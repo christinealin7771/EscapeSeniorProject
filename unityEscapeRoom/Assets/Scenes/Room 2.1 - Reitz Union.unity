@@ -1468,35 +1468,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.311
+      value: 1.212
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.557
+      value: -0.46
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.453
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.65198666
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.27370313
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: -0.6519867
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.27370325
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 45.545
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2405,7 +2405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: keypadCombo
-      value: 151020
+      value: 3444
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: screenNormalColor.b
@@ -3526,7 +3526,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '12 + Bowling * Bowling * painting '
+  m_text: '12 + Bowling * Palette '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
