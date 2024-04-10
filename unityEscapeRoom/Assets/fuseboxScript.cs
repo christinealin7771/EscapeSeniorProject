@@ -42,10 +42,7 @@ public class fuseboxScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if(Input.mousePosition.x == knob0.transform.position.x && Input.mousePosition.y == knob0.transform.position.y && Input.mousePosition.z == knob0.transform.position.z){
-            Debug.Log("ye");
-        }
+
     }
     
 
