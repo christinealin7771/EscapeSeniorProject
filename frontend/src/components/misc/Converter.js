@@ -16,13 +16,17 @@ const Converter = () => {
         }
     };
 
+    function handleSubmit(e) {
+        e.preventDefault();
+    }
+
   return (
     <>
     <Container style={{backgroundColor: '#90AACB', borderRadius: '1rem', padding: '1rem', height:'58vh'}}>
+        
+            <Form style={{marginTop:'40px'}} onSubmit={handleSubmit}>
 
-            <Form style={{marginTop:'40px'}}>
-
-            <h3>Binary to Decimal Convertor</h3>
+            <h3>Binary to Decimal Converter</h3>
             <Form.Control
                 type="text"
                 value={binary}
@@ -30,16 +34,16 @@ const Converter = () => {
                 placeholder="Enter a binary number"
                 style={{marginTop:'20px'}}
             />
-
+            
             <Button onClick={BinToDecimal} style={{backgroundColor:"rgb(48, 86, 132)", border:'none', marginTop:'20px', marginBottom:'20px'}}>Convert</Button>
 
             <h4>Decimal equivalent:</h4>
             <h5>{decimal}</h5>
             </Form>
-
-
+            
+      
     </Container>
-
+   
     </>
   )
 }

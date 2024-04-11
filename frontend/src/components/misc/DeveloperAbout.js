@@ -16,12 +16,11 @@ const DeveloperAbout = ({name, major, pic, linkedinUrl}) => {
   return (
     <Container>
     <div>
-        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+        <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}></a>
         <Card style={cardStyle} 
         onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        >
-            <Card.Img variant="top" src={pic} />
+        onMouseLeave={() => setIsHovered(false)}>
+            <Card.Img variant="top" src={pic}/>
             {isHovered && (
                 <div
                     style={{
@@ -44,7 +43,6 @@ const DeveloperAbout = ({name, major, pic, linkedinUrl}) => {
             </Card.Text>
             </Card.Body>
         </Card>
-        </a>
     </div>
     </Container>
   )

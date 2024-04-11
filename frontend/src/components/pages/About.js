@@ -1,9 +1,8 @@
 import React from 'react';
 import DeveloperAbout from '../misc/DeveloperAbout';
-import Red from "./../images/Red.png";
-import Escape from "./../images/escape.png";
 import { Container, Row, Col } from 'react-bootstrap';
 import Footer from '../Footer';
+import Retiz from '../images/rooms/Retiz.png'
 
 // Developers
 import Joseph_Fleming from "./../images/profile_pic/Joseph_Fleming.jpeg"
@@ -16,7 +15,7 @@ const About = () => {
   
   return (
     <>
-    <Container>
+    <Container fluid>
       <div align="center">
         <h1 style={{ paddingTop: '2.5rem', paddingBottom: '0.5rem', color: '#000000'}}> About the Developers </h1>
         <p style={{ maxWidth: '40rem', fontSize: "1.3rem", color: '#000000'}}>
@@ -46,7 +45,7 @@ const About = () => {
 
         <Row className="justify-content-center">
           <Col xs={12} md={6} style={{ margin: '20px' }}>
-            <img src={Escape} style={{ width: '100%' }}/>
+            <img src={Retiz} style={{ width: '100%', height: '100%'}}/>
           </Col>
           <Col xs={12} md={8} style={{ margin: '20px' }}>
             <p style={{ fontSize: "30px", textAlign: 'center', color: '#000000'}}>
