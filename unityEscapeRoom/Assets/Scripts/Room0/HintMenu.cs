@@ -44,10 +44,11 @@ public class HintMenu : MonoBehaviour
         pauseButtonObject.SetActive(!hintClicked);
 
         if (AudioObject.GetComponent<AudioManagerScript>().pauseMusic){
-            musicObject.SetActive(!hintClicked);
+            muteObject.SetActive(!hintClicked);
         }
         else {
-            muteObject.SetActive(!hintClicked);
+            
+            musicObject.SetActive(!hintClicked);
         }
         
         
