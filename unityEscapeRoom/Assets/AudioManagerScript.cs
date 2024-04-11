@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioManagerScript : MonoBehaviour
 {
     public bool pauseMusic = false;
-    [SerializeField] AudioSource MusicSource;
+    [SerializeField] public AudioSource MusicSource;
     [SerializeField] AudioSource SFXSource;
     // Start is called before the first frame update
     public AudioClip background;
@@ -19,7 +19,7 @@ public class AudioManagerScript : MonoBehaviour
         SFXSource.clip = clickSound;
         SFXSource.volume = 0.333f;
 
-        MusicObject.SetActive(false);
+        MuteObject.SetActive(false);
         DontDestroyOnLoad(gameObject);
         MusicSource.clip = background;
         MusicSource.loop = true;
@@ -50,8 +50,8 @@ public class AudioManagerScript : MonoBehaviour
     public void PauseMusic (){
         pauseMusic = !pauseMusic;
 
-        MuteObject.SetActive(!pauseMusic);
-        MusicObject.SetActive(pauseMusic);
+        MuteObject.SetActive(pauseMusic);
+        MusicObject.SetActive(!pauseMusic);
         
         if (!pauseMusic){
             MusicSource.Play();
