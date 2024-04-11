@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class WireBoxScript : MonoBehaviour
 {
+    private AudioSource successSound;
     public Transform target;
     public float speed;
     private bool moving = false;
@@ -22,6 +23,7 @@ public class WireBoxScript : MonoBehaviour
     public Vector3 WireBoxVector;
     private GameObject[] Wires = new GameObject[20];
     private int counter = 0;
+    private int counter2 = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,7 @@ public class WireBoxScript : MonoBehaviour
     //    originalRot = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
         
         GameObject.Find("WireBox_Back_Button").GetComponent<Renderer>().enabled = false;
+        successSound = GetComponent<AudioSource>();
     }
 
     private void OnMouseDown() 
@@ -79,6 +82,11 @@ public class WireBoxScript : MonoBehaviour
         if(counter >= 20){
             Debug.Log("All Connected");
             allConnected = true;
+            
+            if(counter2 == 0){
+                successSound.Play();
+                counter2++;
+            }
         }
         else{
             counter = 0;
@@ -106,7 +114,7 @@ public class WireBoxScript : MonoBehaviour
         if(moving == true){
             transform.position = Vector3.MoveTowards(transform.position, target.position + target.forward + WireBoxVector, speed);
             transform.right = target.position - target.position;
-            FindObjectOfType<AudioManagerScript>().ClickedOn();
+        //    FindObjectOfType<AudioManagerScript>().ClickedOn();
             newRot = new Vector3(target.rotation.x + rotX, target.rotation.y + rotY, target.rotation.z + rotZ);
             transform.eulerAngles = newRot;
             if(transform.position == target.position + target.forward + WireBoxVector){
