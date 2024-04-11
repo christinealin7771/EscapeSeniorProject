@@ -2791,7 +2791,7 @@ MonoBehaviour:
   m_text: "Today's Training Regiment:\r\n\nHoward: \r\n49 push ups\r\nFour reps of
     15 squats\r\n800lb deadlift\r\n\nMinnie:\r\nFour sets of planks (1 minute)\r\n5
     sets of lat pulls (20 each)\r\n30 minutes on the treadmill (Five mph)\r\n\nP.S:
-    I hid the meeting time in the\r\nabove regiment. Find the difference!"
+    I hid the meeting time in the\r\nabove regiment. Spell it out!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
