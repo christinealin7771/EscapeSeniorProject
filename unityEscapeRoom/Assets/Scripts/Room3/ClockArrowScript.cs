@@ -26,6 +26,8 @@ public class ClockArrowScript : MonoBehaviour {
     public GameObject hourText;
     public GameObject minText;
 
+    public AudioSource wrongAnswer;
+
     
     //-- time speed factor
     public float clockSpeed = 1.0f;     // 1.0f = realtime, < 1.0f = slower, > 1.0f = faster
@@ -39,6 +41,7 @@ void Start()
 {
     
     pointerSeconds.GetComponent<Renderer>().enabled = false;
+    wrongAnswer.Pause();
 
     popUpGameObject.SetActive(false);
     clueSolvedObject.SetActive(false);
@@ -56,6 +59,7 @@ void Update()
     if (!clockScript.inFront){
         minutes = 0;
         hour = 12;
+        wrongAnswer.Pause();
     }
     //-- calculate time
     msecs += Time.deltaTime * clockSpeed;
@@ -156,9 +160,11 @@ void Update()
         }
         else
         {
+            
             reachedGoalTime = false;
             // Debug.Log("Not yet reached 1:15!");
             popUpGameObject.SetActive(false);
+            wrongAnswer.Play();
         }
 
         GameObject.Find("Submit_Button").GetComponent<ClockSubmitButton>().submitButtonClicked = false;
