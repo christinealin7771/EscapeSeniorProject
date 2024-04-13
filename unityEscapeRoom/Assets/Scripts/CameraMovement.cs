@@ -30,6 +30,7 @@ public class MouseLookAround : MonoBehaviour
     public CaesarPictureScript cPictureScript;
     public MusicBookScript mBookScript;
     public MusicSheetScript mChartScript;
+    public fuseboxScript fboxScript;
     List<BackArrowScript> backArrowScripts = new List<BackArrowScript>();
     List<KeypadButton> keypadButtons = new List<KeypadButton>();
 
@@ -59,6 +60,7 @@ public class MouseLookAround : MonoBehaviour
         cPictureScript = FindObjectOfType<CaesarPictureScript>();
         mBookScript = FindObjectOfType<MusicBookScript>();
         mChartScript = FindObjectOfType<MusicSheetScript>();
+        fboxScript = FindObjectOfType<fuseboxScript>();
         BackArrowScript[] backArrowScriptArray = FindObjectsOfType<BackArrowScript>();
         backArrowScripts.AddRange(backArrowScriptArray);
         KeypadButton[] keypadButtonArray = FindObjectsOfType<KeypadButton>();
@@ -132,6 +134,7 @@ public class MouseLookAround : MonoBehaviour
                     morseScript.DisableInteraction();
                     wireboxScript.DisableInteraction();
                     tvScript.DisableInteraction();
+                    fboxScript.DisableInteraction();
                 }
                 else if(currentScene.name == "Room 5 - Century Tower"){
                     cBookScript.DisableInteraction();
@@ -207,10 +210,9 @@ public class MouseLookAround : MonoBehaviour
                 rotationY = initialRotation.y;
                 transform.localEulerAngles = initialRotation;
                 
-            //    clockScript.DisableInteraction();
-            //    keypadScript.DisableInteraction();
                 morseScript.DisableInteraction();
                 tvScript.DisableInteraction();
+                fboxScript.DisableInteraction();
             }
             else if (morseScript != null && morseScript.inFront)
             {
@@ -218,10 +220,9 @@ public class MouseLookAround : MonoBehaviour
                 rotationY = initialRotation.y;
                 transform.localEulerAngles = initialRotation;
                 
-            //    clockScript.DisableInteraction();
-            //    keypadScript.DisableInteraction();
                 tvScript.DisableInteraction();
                 wireboxScript.DisableInteraction();
+                fboxScript.DisableInteraction();
             }
             else if(tvScript != null && tvScript.inFront){
                 rotationX = initialRotation.x;
@@ -229,6 +230,15 @@ public class MouseLookAround : MonoBehaviour
                 transform.localEulerAngles = initialRotation;
                 wireboxScript.DisableInteraction();
                 morseScript.DisableInteraction();
+                fboxScript.DisableInteraction();
+            }
+            else if(fboxScript != null && fboxScript.inFront){
+                rotationX = initialRotation.x;
+                rotationY = initialRotation.y;
+                transform.localEulerAngles = initialRotation;
+                wireboxScript.DisableInteraction();
+                morseScript.DisableInteraction();
+                tvScript.DisableInteraction();
             }
             else if(cBookScript != null && cBookScript.inFront){
                 rotationX = initialRotation.x;
@@ -299,6 +309,7 @@ public class MouseLookAround : MonoBehaviour
                     morseScript.EnableInteraction();
                     wireboxScript.EnableInteraction();
                     tvScript.EnableInteraction();
+                    fboxScript.EnableInteraction();
                 }
                 else if(currentScene.name == "Room 5 - Century Tower"){
                     cBookScript.EnableInteraction();
@@ -390,6 +401,8 @@ public class MouseLookAround : MonoBehaviour
             morseScript.DisableInteraction();
         if (tvScript != null)
             tvScript.DisableInteraction();
+        if(fboxScript != null)
+            fboxScript.DisableInteraction();
         if (cPictureScript != null)
             cPictureScript.DisableInteraction();
         if (cBookScript != null)
