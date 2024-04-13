@@ -5578,43 +5578,43 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'In twilight''s embrace, shadows in hue,
+  m_text: '1    In twilight''s embrace, shadows in hue,
 
-    Green secrets whispered,
+    2    Green secrets whispered,
     nature''s clue.
 
-    A sombre dusk, mysterious and deep,
+    3    A sombre dusk, mysterious and deep,
 
-    Hints of a lock,
-    secrets to keep.
-
-
-
-
-
-    Moonlight bathes in a tranquil sea,
-
-    Blue whispers
-    unlock destiny.
-
-    Keys hidden in petals of violet bloom,
-
-    Unlocking the
-    night, dispelling gloom.
+    4    Hints
+    of a lock, secrets to keep.
 
 
 
 
 
-    A dance of colors, a cryptic ballet,
+    5    Moonlight bathes in a tranquil sea,
 
-    A
-    canvas of dreams, where secrets sway.
+    6   
+    Blue whispers unlock destiny.
 
-    Hold the key, mark the line,
+    7    Keys hidden in petals of violet bloom,
 
-    The
-    escape unlocks once they combine.'
+    8   
+    Unlocking the night, dispelling gloom.
+
+
+
+
+
+    9    A dance of colors, a cryptic
+    ballet,
+
+    10  A canvas of dreams, where secrets sway.
+
+    11  Hold the key,
+    mark the line,
+
+    12  The escape unlocks once they combine.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6885,6 +6885,7 @@ MonoBehaviour:
   cPictureScript: {fileID: 0}
   mBookScript: {fileID: 0}
   mChartScript: {fileID: 0}
+  fboxScript: {fileID: 0}
   cameraPaused: 0
 --- !u!1001 &2143518279
 PrefabInstance:
