@@ -4698,11 +4698,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 931170555}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06e8469a9fb2b6e498ed624c631563fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 26f9b1b537cca454690b59a385ec500f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorLocked: 1
-  roomNameList: []
+  dScript: {fileID: 0}
 --- !u!1 &931229439 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c4d3020259a0ba4ba2ea5d1d9bedf6d, type: 3}
@@ -6045,6 +6044,7 @@ MonoBehaviour:
   cPictureScript: {fileID: 0}
   mBookScript: {fileID: 0}
   mChartScript: {fileID: 0}
+  fboxScript: {fileID: 0}
   cameraPaused: 0
 --- !u!81 &1273180095
 AudioListener:

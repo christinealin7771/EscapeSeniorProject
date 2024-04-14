@@ -4987,7 +4987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: keypadCombo
-      value: 401074030
+      value: 142278
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: screenNormalColor.b
@@ -7694,7 +7694,7 @@ GameObject:
   - component: {fileID: 1487408060}
   - component: {fileID: 1487408059}
   - component: {fileID: 1487408058}
-  - component: {fileID: 1487408062}
+  - component: {fileID: 1487408063}
   m_Layer: 0
   m_Name: Back Door
   m_TagString: Untagged
@@ -7788,7 +7788,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1487408062
+--- !u!114 &1487408063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7797,11 +7797,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1487408056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06e8469a9fb2b6e498ed624c631563fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 26f9b1b537cca454690b59a385ec500f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorLocked: 0
-  roomNameList: []
+  dScript: {fileID: 0}
 --- !u!1 &1627714336
 GameObject:
   m_ObjectHideFlags: 0
