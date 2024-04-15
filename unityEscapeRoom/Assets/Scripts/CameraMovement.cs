@@ -17,7 +17,7 @@ public class MouseLookAround : MonoBehaviour
     public BookScript bookScript;
     public LaptopScript laptopScript;
     public KeyPadZoomScript keypadScript;
-    public PaintingScript paintingScript;
+    // public PaintingScript paintingScript;
     public PaletteScript paletteScript;
     public BowlscoreScript bowlscoreScript;
     public PrinterScript printerScript;
@@ -47,7 +47,7 @@ public class MouseLookAround : MonoBehaviour
         bookScript = FindObjectOfType<BookScript>();
         laptopScript = FindObjectOfType<LaptopScript>();
         keypadScript = FindObjectOfType<KeyPadZoomScript>();
-        paintingScript = FindObjectOfType<PaintingScript>();
+        // paintingScript = FindObjectOfType<PaintingScript>();
         paletteScript = FindObjectOfType<PaletteScript>();
         bowlscoreScript = FindObjectOfType<BowlscoreScript>();
         printerScript = FindObjectOfType<PrinterScript>();
@@ -93,7 +93,7 @@ public class MouseLookAround : MonoBehaviour
                 transform.localEulerAngles = initialRotation;
 
                 laptopScript.DisableInteraction();
-                paintingScript.DisableInteraction();
+                // paintingScript.DisableInteraction();
                 keypadScript.DisableInteraction();
             }
             else if (laptopScript != null && laptopScript.inFront)
@@ -103,7 +103,7 @@ public class MouseLookAround : MonoBehaviour
                 transform.localEulerAngles = initialRotation;
 
                 bookScript.DisableInteraction();
-                paintingScript.DisableInteraction();
+                // paintingScript.DisableInteraction();
                 keypadScript.DisableInteraction();
             }
             else if (keypadScript != null && keypadScript.inFront)
@@ -116,9 +116,35 @@ public class MouseLookAround : MonoBehaviour
                 {
                     bookScript.DisableInteraction();
                     laptopScript.DisableInteraction();
-                    paintingScript.DisableInteraction();
+                    // paintingScript.DisableInteraction();
+                }
+                else if (currentScene.name == "Room 1.2 - Marston")
+                {
+                    bookScript.DisableInteraction();
+                    laptopScript.DisableInteraction();
+                    // paintingScript.DisableInteraction();
+                }
+                else if (currentScene.name == "Room 1.3 - Marston")
+                {
+                    bookScript.DisableInteraction();
+                    laptopScript.DisableInteraction();
+                    // paintingScript.DisableInteraction();
                 }
                 else if (currentScene.name == "Room 2.1 - Reitz Union")
+                {
+                    clipboardScript.DisableInteraction();
+                    paletteScript.DisableInteraction();
+                    bowlscoreScript.DisableInteraction();
+                    printerScript.DisableInteraction();
+                }
+                else if (currentScene.name == "Room 2.2 - Reitz Union")
+                {
+                    clipboardScript.DisableInteraction();
+                    paletteScript.DisableInteraction();
+                    bowlscoreScript.DisableInteraction();
+                    printerScript.DisableInteraction();
+                }
+                else if (currentScene.name == "Room 2.3 - Reitz Union")
                 {
                     clipboardScript.DisableInteraction();
                     paletteScript.DisableInteraction();
@@ -143,16 +169,16 @@ public class MouseLookAround : MonoBehaviour
                     mChartScript.DisableInteraction();
                 }
             }
-            else if (paintingScript != null && paintingScript.inFront)
-            {
-                rotationX = initialRotation.x;
-                rotationY = initialRotation.y;
-                transform.localEulerAngles = initialRotation;
+            // else if (paintingScript != null && paintingScript.inFront)
+            // {
+            //     rotationX = initialRotation.x;
+            //     rotationY = initialRotation.y;
+            //     transform.localEulerAngles = initialRotation;
 
-                bookScript.DisableInteraction();
-                laptopScript.DisableInteraction();
-                keypadScript.DisableInteraction();
-            }
+            //     bookScript.DisableInteraction();
+            //     laptopScript.DisableInteraction();
+            //     keypadScript.DisableInteraction();
+            // }
             else if (paletteScript != null && paletteScript.inFront)
             {
                 rotationX = initialRotation.x;
@@ -291,9 +317,35 @@ public class MouseLookAround : MonoBehaviour
                 {
                     bookScript.EnableInteraction();
                     laptopScript.EnableInteraction();
-                    paintingScript.EnableInteraction();
+                    // paintingScript.EnableInteraction();
+                }
+                else if (currentScene.name == "Room 1.2 - Marston")
+                {
+                    bookScript.EnableInteraction();
+                    laptopScript.EnableInteraction();
+                    // paintingScript.EnableInteraction();
+                }
+                else if (currentScene.name == "Room 1.3 - Marston")
+                {
+                    bookScript.EnableInteraction();
+                    laptopScript.EnableInteraction();
+                    // paintingScript.EnableInteraction();
                 }
                 else if (currentScene.name == "Room 2.1 - Reitz Union")
+                {
+                    clipboardScript.EnableInteraction();
+                    paletteScript.EnableInteraction();
+                    bowlscoreScript.EnableInteraction();
+                    printerScript.EnableInteraction();
+                }
+                else if (currentScene.name == "Room 2.2 - Reitz Union")
+                {
+                    clipboardScript.EnableInteraction();
+                    paletteScript.EnableInteraction();
+                    bowlscoreScript.EnableInteraction();
+                    printerScript.EnableInteraction();
+                }
+                else if (currentScene.name == "Room 2.3 - Reitz Union")
                 {
                     clipboardScript.EnableInteraction();
                     paletteScript.EnableInteraction();
@@ -383,8 +435,8 @@ public class MouseLookAround : MonoBehaviour
             laptopScript.DisableInteraction();
         if (keypadScript != null)
             keypadScript.DisableInteraction();
-        if (paintingScript != null)
-            paintingScript.DisableInteraction();
+        // if (paintingScript != null)
+        //     paintingScript.DisableInteraction();
         if (paletteScript != null)
             paletteScript.DisableInteraction();
         if (bowlscoreScript != null)

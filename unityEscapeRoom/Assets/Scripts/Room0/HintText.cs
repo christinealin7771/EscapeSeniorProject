@@ -11,7 +11,7 @@ public class HintText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sceneHintMap.Add("Room 1.1 - Marston", new string[] { "The painting has color significance.", "Identify the line number for each color.", "The computer distinguishes the color order." });
+        sceneHintMap.Add("Room 1.1 - Marston", new string[] { "Focus on the colors on the computer", "Identify the line number for each color.", "The computer also distinguishes the color order." });
         sceneHintMap.Add("Room 2.1 - Reitz Union", new string[] { "Let's go bowling first! What is the missing numbers?", "What color connects it all?", "Never forget your math especially PEMDAS!" });
         sceneHintMap.Add("Room 3 - Southwest Rec", new string[] { "Spelling out a good workout is better than digits", "Time is of the essence!", "Look around the room and you have already set the minutes." });
         sceneHintMap.Add("Room 4 - Malachowsky Hall", new string[] { "The fuses have short-circuited, they do not work.", "Observe the sentence for something strange.", "One entire binary number." });
