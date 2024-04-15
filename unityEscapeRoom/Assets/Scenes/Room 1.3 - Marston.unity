@@ -4781,7 +4781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: keypadCombo
-      value: 762
+      value: 316
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: screenNormalColor.b
@@ -5505,7 +5505,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564168526}
   m_LocalRotation: {x: 0.6732652, y: 0.68169516, z: 0.20177996, w: -0.20320088}
-  m_LocalPosition: {x: 0, y: 0, z: 31.9}
+  m_LocalPosition: {x: 0, y: 0, z: 32.06}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5513,7 +5513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 25, y: 142.261, z: 17}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.3, y: 44.6}
+  m_AnchoredPosition: {x: -16.3, y: 44.84}
   m_SizeDelta: {x: 20.06, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564168528
@@ -5536,12 +5536,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1    In twilight''s embrace, shadows in hue,
+  m_text: '1    In twilight''s embrace, blue shadows in hue,
 
-    2    Green secrets whispered,
+    2    Secrets whispered,
     nature''s clue.
 
-    3    A sombre dusk, mysterious and deep,
+    3    A violet dusk, mysterious and deep,
 
     4    Hints
     of a lock, secrets to keep.
@@ -5553,9 +5553,9 @@ MonoBehaviour:
     5    Moonlight bathes in a tranquil sea,
 
     6   
-    Blue whispers unlock destiny.
+    Whispers unlock the green destiny.
 
-    7    Keys hidden in petals of violet bloom,
+    7    Keys hidden in petals of bloom,
 
     8   
     Unlocking the night, dispelling gloom.
