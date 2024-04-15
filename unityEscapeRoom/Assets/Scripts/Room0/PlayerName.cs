@@ -36,11 +36,11 @@ public class PlayerName : MonoBehaviour
             StartGame (saveName);
         #endif
 
-        // int randomRoom = Random.Range(1, 4);   // creates a number between 1 and 3
-        // SceneManager.LoadScene("Room 1." + randomRoom + " - Marston");
+        int randomRoom = Random.Range(1, 4);   // creates a number between 1 and 3
+        SceneManager.LoadScene("Room 1." + randomRoom + " - Marston");
 
         //   int randomRoom = Random.Range(1, 4);   // creates a number between 1 and 3
-        SceneManager.LoadScene("Room 1.1 - Marston");
+        // SceneManager.LoadScene("Room 1.1 - Marston");
 
     }
 }

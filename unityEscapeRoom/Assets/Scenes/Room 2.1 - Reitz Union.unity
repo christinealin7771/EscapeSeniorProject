@@ -2453,7 +2453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ClickToRoom3, Assembly-CSharp
+      value: DoorHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: onAccessGranted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -3741,7 +3741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4795266759639050, guid: 72653085a6b827f48b10b434c7972f1c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.025
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 4795266759639050, guid: 72653085a6b827f48b10b434c7972f1c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3924,7 +3924,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f9b1b537cca454690b59a385ec500f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dScript: {fileID: 0}
 --- !u!1 &1458284642
 GameObject:
   m_ObjectHideFlags: 0
@@ -5419,10 +5418,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1835098550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7e6ace25f5cfa441840851dbec694a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 06e8469a9fb2b6e498ed624c631563fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   doorLocked: 1
+  roomNameList:
+  - Room 3 - Southwest Rec
+  - Room 3 - Southwest Rec
+  - Room 3 - Southwest Rec
 --- !u!1 &1874487341
 GameObject:
   m_ObjectHideFlags: 0
@@ -6247,7 +6250,6 @@ MonoBehaviour:
   bookScript: {fileID: 0}
   laptopScript: {fileID: 0}
   keypadScript: {fileID: 0}
-  paintingScript: {fileID: 0}
   paletteScript: {fileID: 0}
   bowlscoreScript: {fileID: 0}
   printerScript: {fileID: 0}

@@ -2391,8 +2391,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 627640635}
-  - component: {fileID: 627640637}
-  - component: {fileID: 627640636}
   m_Layer: 0
   m_Name: Marston Picture
   m_TagString: Untagged
@@ -2418,46 +2416,6 @@ Transform:
   - {fileID: 1021970092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &627640636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627640634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f94de755ab0203e44bb82162cfaa0b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 2138778167}
-  speed: 0.05
-  inFront: 0
-  rotX: 0
-  rotY: 0
-  rotZ: 0
-  paintingVector: {x: 0.25, y: -1.05, z: 0}
---- !u!65 &627640637
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627640634}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.51678336, y: 0.5139215, z: 0.05187331}
-  m_Center: {x: -0.14613807, y: 0.5593264, z: -0.060097136}
 --- !u!1 &673501232
 GameObject:
   m_ObjectHideFlags: 0
@@ -4311,7 +4269,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 63e6652f3d703437b96cff2f7b588122, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b8a4ff69fd7ac6c4ba102742cad276b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5547,7 +5505,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564168526}
   m_LocalRotation: {x: 0.6732652, y: 0.68169516, z: 0.20177996, w: -0.20320088}
-  m_LocalPosition: {x: 0, y: 0, z: 31.9}
+  m_LocalPosition: {x: 0, y: 0, z: 32.08}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5555,7 +5513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 25, y: 142.261, z: 17}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16.3, y: 44.6}
+  m_AnchoredPosition: {x: -16.3, y: 44.87}
   m_SizeDelta: {x: 20.06, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564168528
@@ -6190,8 +6148,8 @@ MonoBehaviour:
   doorLocked: 1
   roomNameList:
   - Room 2.1 - Reitz Union
-  - Room 2.1 - Reitz Union
-  - Room 2.1 - Reitz Union
+  - Room 2.2 - Reitz Union
+  - Room 2.3 - Reitz Union
 --- !u!1001 &1846318294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6872,7 +6830,6 @@ MonoBehaviour:
   bookScript: {fileID: 0}
   laptopScript: {fileID: 0}
   keypadScript: {fileID: 0}
-  paintingScript: {fileID: 0}
   paletteScript: {fileID: 0}
   bowlscoreScript: {fileID: 0}
   printerScript: {fileID: 0}
