@@ -156,7 +156,19 @@ public class MouseLookAround : MonoBehaviour
                     clockScript.DisableInteraction();
                     notebookScript.DisableInteraction();
                 }
-                else if(currentScene.name == "Room 4 - Malachowsky Hall"){
+                else if(currentScene.name == "Room 4.1 - Malachowsky Hall"){
+                    morseScript.DisableInteraction();
+                    wireboxScript.DisableInteraction();
+                    tvScript.DisableInteraction();
+                    fboxScript.DisableInteraction();
+                }
+                else if(currentScene.name == "Room 4.2 - Malachowsky Hall"){
+                    morseScript.DisableInteraction();
+                    wireboxScript.DisableInteraction();
+                    tvScript.DisableInteraction();
+                    fboxScript.DisableInteraction();
+                }
+                else if(currentScene.name == "Room 4.3 - Malachowsky Hall"){
                     morseScript.DisableInteraction();
                     wireboxScript.DisableInteraction();
                     tvScript.DisableInteraction();
@@ -357,7 +369,19 @@ public class MouseLookAround : MonoBehaviour
                     clockScript.EnableInteraction();
                     notebookScript.EnableInteraction();
                 }
-                else if(currentScene.name == "Room 4 - Malachowsky Hall"){
+                else if(currentScene.name == "Room 4.1 - Malachowsky Hall"){
+                    morseScript.EnableInteraction();
+                    wireboxScript.EnableInteraction();
+                    tvScript.EnableInteraction();
+                    fboxScript.EnableInteraction();
+                }
+                else if(currentScene.name == "Room 4.2 - Malachowsky Hall"){
+                    morseScript.EnableInteraction();
+                    wireboxScript.EnableInteraction();
+                    tvScript.EnableInteraction();
+                    fboxScript.EnableInteraction();
+                }
+                else if(currentScene.name == "Room 4.3 - Malachowsky Hall"){
                     morseScript.EnableInteraction();
                     wireboxScript.EnableInteraction();
                     tvScript.EnableInteraction();
