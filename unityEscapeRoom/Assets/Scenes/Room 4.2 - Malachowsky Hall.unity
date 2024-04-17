@@ -4268,9 +4268,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 80fc11e0c0de68845958dcf9841d4d13, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 654f050776241df4b9a32626618285be, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.318
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4989,7 +4989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: keypadCombo
-      value: 367157276
+      value: 106825
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: screenNormalColor.b
@@ -8084,7 +8084,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -.-. / --- / -.. / . / -.. / -- / . / ... / ... / .- / --. / .
+  m_text: ".. / -- / .- / ... / . / -.-. / .-. / . / -\t\neach / is a space"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
