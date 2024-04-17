@@ -28,6 +28,8 @@ public class ClockArrowScript : MonoBehaviour {
 
     public AudioSource wrongAnswer;
 
+    public int hourAnswer = 4;
+    public int minuteAnswer = 45;
     
     //-- time speed factor
     public float clockSpeed = 1.0f;     // 1.0f = realtime, < 1.0f = slower, > 1.0f = faster
@@ -145,7 +147,7 @@ void Update()
     public void CheckTime() // Function called by the button
     {
         // Check if it's 1:15
-        if (hour == 4 && minutes == 45)
+        if (hour == hourAnswer && minutes == minuteAnswer)
         {
             reachedGoalTime = true;
             // Debug.Log("Reached 2:15!");
