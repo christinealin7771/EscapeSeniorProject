@@ -151,7 +151,17 @@ public class MouseLookAround : MonoBehaviour
                     bowlscoreScript.DisableInteraction();
                     printerScript.DisableInteraction();
                 }
-                else if (currentScene.name == "Room 3 - Southwest Rec")
+                else if (currentScene.name == "Room 3.1 - Southwest Rec")
+                {
+                    clockScript.DisableInteraction();
+                    notebookScript.DisableInteraction();
+                }
+                else if (currentScene.name == "Room 3.2 - Southwest Rec")
+                {
+                    clockScript.DisableInteraction();
+                    notebookScript.DisableInteraction();
+                }
+                else if (currentScene.name == "Room 3.3 - Southwest Rec")
                 {
                     clockScript.DisableInteraction();
                     notebookScript.DisableInteraction();
@@ -364,7 +374,17 @@ public class MouseLookAround : MonoBehaviour
                     bowlscoreScript.EnableInteraction();
                     printerScript.EnableInteraction();
                 }
-                else if (currentScene.name == "Room 3 - Southwest Rec")
+                else if (currentScene.name == "Room 3.1 - Southwest Rec")
+                {
+                    clockScript.EnableInteraction();
+                    notebookScript.EnableInteraction();
+                }
+                else if (currentScene.name == "Room 3.2 - Southwest Rec")
+                {
+                    clockScript.EnableInteraction();
+                    notebookScript.EnableInteraction();
+                }
+                else if (currentScene.name == "Room 3.3 - Southwest Rec")
                 {
                     clockScript.EnableInteraction();
                     notebookScript.EnableInteraction();

@@ -5423,9 +5423,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorLocked: 1
   roomNameList:
-  - Room 3 - Southwest Rec
-  - Room 3 - Southwest Rec
-  - Room 3 - Southwest Rec
+  - Room 3.1 - Southwest Rec
+  - Room 3.2 - Southwest Rec
+  - Room 3.3 - Southwest Rec
 --- !u!1 &1874487341
 GameObject:
   m_ObjectHideFlags: 0
