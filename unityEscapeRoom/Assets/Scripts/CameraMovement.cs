@@ -174,7 +174,19 @@ public class MouseLookAround : MonoBehaviour
                     tvScript.DisableInteraction();
                     fboxScript.DisableInteraction();
                 }
-                else if(currentScene.name == "Room 5 - Century Tower"){
+                else if(currentScene.name == "Room 5.1 - Century Tower"){
+                    cBookScript.DisableInteraction();
+                    cPictureScript.DisableInteraction();
+                    mBookScript.DisableInteraction();
+                    mChartScript.DisableInteraction();
+                }
+                else if(currentScene.name == "Room 5.2 - Century Tower"){
+                    cBookScript.DisableInteraction();
+                    cPictureScript.DisableInteraction();
+                    mBookScript.DisableInteraction();
+                    mChartScript.DisableInteraction();
+                }
+                else if(currentScene.name == "Room 5.3 - Century Tower"){
                     cBookScript.DisableInteraction();
                     cPictureScript.DisableInteraction();
                     mBookScript.DisableInteraction();
@@ -387,7 +399,19 @@ public class MouseLookAround : MonoBehaviour
                     tvScript.EnableInteraction();
                     fboxScript.EnableInteraction();
                 }
-                else if(currentScene.name == "Room 5 - Century Tower"){
+                else if(currentScene.name == "Room 5.1 - Century Tower"){
+                    cBookScript.EnableInteraction();
+                    cPictureScript.EnableInteraction();
+                    mBookScript.EnableInteraction();
+                    mChartScript.EnableInteraction();
+                }
+                else if(currentScene.name == "Room 5.2 - Century Tower"){
+                    cBookScript.EnableInteraction();
+                    cPictureScript.EnableInteraction();
+                    mBookScript.EnableInteraction();
+                    mChartScript.EnableInteraction();
+                }
+                else if(currentScene.name == "Room 5.3 - Century Tower"){
                     cBookScript.EnableInteraction();
                     cPictureScript.EnableInteraction();
                     mBookScript.EnableInteraction();
