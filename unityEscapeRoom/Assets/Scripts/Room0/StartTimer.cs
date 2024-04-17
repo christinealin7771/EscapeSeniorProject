@@ -32,6 +32,8 @@ public class StartTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         PlayerPrefs.SetString("escapeTime", Convert.ToString(timer));
         mouseLookScript = Camera.main.GetComponent<MouseLookAround>();
         if (gamePaused == false) {
@@ -56,12 +58,27 @@ public class StartTimer : MonoBehaviour
         pauseMenuObject.SetActive(gamePaused);
         pauseButtonObject.SetActive(!gamePaused);
         hintButtonObject.SetActive(!gamePaused);
+        // muteObject.SetActive(!gamePaused);
+        // musicObject.SetActive(!gamePaused);
+        
 
-        if (AudioObject.GetComponent<AudioManagerScript>().pauseMusic){
+
+
+        if (gamePaused) {
+            AudioObject.GetComponent<AudioManagerScript>().MusicSource.Pause();
+            muteObject.SetActive(!gamePaused);
             musicObject.SetActive(!gamePaused);
         }
         else {
-            muteObject.SetActive(!gamePaused);
+   
+            if (AudioObject.GetComponent<AudioManagerScript>().pauseMusic){
+                AudioObject.GetComponent<AudioManagerScript>().MusicSource.Pause();
+                muteObject.SetActive(!gamePaused);
+            }
+            else {
+                musicObject.SetActive(!gamePaused);
+                AudioObject.GetComponent<AudioManagerScript>().MusicSource.Play();
+            }
         }
 
         if(mouseLookScript != null)
