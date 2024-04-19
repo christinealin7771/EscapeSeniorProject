@@ -4319,6 +4319,7 @@ MonoBehaviour:
   rotZ: 0
   allConnected: 0
   WireBoxVector: {x: -0.6, y: 0.1, z: 0}
+  amongus: {fileID: 1879651303}
 --- !u!65 &747937654
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5772,6 +5773,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amongus: {fileID: 1879651303}
+--- !u!65 &1083367378
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083367373}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.35853788, y: 0.23044041, z: 0.030770376}
+  m_Center: {x: 0, y: -0.000015798956, z: 0.010939693}
 --- !u!1 &1087638716
 GameObject:
   m_ObjectHideFlags: 0
@@ -7800,6 +7822,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5203168598289490951, guid: a5d24bf889543814c8a73ada3c1f8e20, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1083367377}
+    - targetCorrespondingSourceObject: {fileID: 5203168598289490951, guid: a5d24bf889543814c8a73ada3c1f8e20, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1083367378}
   m_SourcePrefab: {fileID: 100100000, guid: a5d24bf889543814c8a73ada3c1f8e20, type: 3}
 --- !u!1 &1469142127 stripped
 GameObject:
