@@ -4810,7 +4810,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorLocked: 1
   roomNameList:
-  - Room 5 - Century Tower
+  - Room 5.1 - Century Tower
+  - Room 5.2 - Century Tower
+  - Room 5.3 - Century Tower
 --- !u!1 &916145117
 GameObject:
   m_ObjectHideFlags: 0
@@ -5673,7 +5675,6 @@ MonoBehaviour:
   bookScript: {fileID: 0}
   laptopScript: {fileID: 0}
   keypadScript: {fileID: 0}
-  paintingScript: {fileID: 0}
   paletteScript: {fileID: 0}
   bowlscoreScript: {fileID: 0}
   printerScript: {fileID: 0}
@@ -8083,7 +8084,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: .- / -- / --- / -. / --. / ..- / ...
+  m_text: '.- / -- / --- / -. / --. / ..- / ...
+
+    each / is a space'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
