@@ -8,6 +8,7 @@ public class VentClicker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Amongus");
         amongus.GetComponent<Renderer>().enabled = false;
     }
 
@@ -18,7 +19,7 @@ public class VentClicker : MonoBehaviour
     }
 
     private void OnMouseDown() {
-        Debug.Log("Clicked");
+        Debug.Log("Amongus Clicked");
         amongus.GetComponent<Renderer>().enabled = true;
 
         StartCoroutine(RemoveAfterSeconds(5));

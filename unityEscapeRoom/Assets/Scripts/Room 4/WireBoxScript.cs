@@ -114,7 +114,9 @@ public class WireBoxScript : MonoBehaviour
 
     void MoveToFront() {
         if(moving == true){
-            amongus.GetComponent<Renderer>().enabled = false;
+            if(amongus != null){
+                amongus.GetComponent<Renderer>().enabled = false;
+            }
             transform.position = Vector3.MoveTowards(transform.position, target.position + target.forward + WireBoxVector, speed);
             transform.right = target.position - target.position;
             if(FindObjectOfType<AudioManagerScript>() != null){
