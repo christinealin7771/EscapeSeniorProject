@@ -50,7 +50,6 @@ const About = () => {
           <Col xs={12} md={8} style={{ margin: '20px' }}>
             <p style={{ fontSize: "30px", textAlign: 'center', color: '#000000'}}>
               This game is powered by Unity and linked with React to this website. 
-              Aspects of the website may be more than what they seem.
             </p>
             <p style={{ fontSize: "30px", textAlign: 'center', color:'#F8A528'}}>
               Can YOU make it to the end in the fastest time possible?
