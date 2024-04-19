@@ -24,6 +24,8 @@ public class WireBoxScript : MonoBehaviour
     private GameObject[] Wires = new GameObject[20];
     private int counter = 0;
     private int counter2 = 0;
+
+    public GameObject amongus;
     
     // Start is called before the first frame update
     void Start()
@@ -112,6 +114,9 @@ public class WireBoxScript : MonoBehaviour
 
     void MoveToFront() {
         if(moving == true){
+            if(amongus != null){
+                amongus.GetComponent<Renderer>().enabled = false;
+            }
             transform.position = Vector3.MoveTowards(transform.position, target.position + target.forward + WireBoxVector, speed);
             transform.right = target.position - target.position;
             if(FindObjectOfType<AudioManagerScript>() != null){

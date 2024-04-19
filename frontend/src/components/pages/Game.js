@@ -25,6 +25,7 @@ const Game = () => {
     dataUrl: "/Build/Assembly-CSharp.data.unityweb",
     frameworkUrl: "/Build/Assembly-CSharp.framework.js.unityweb",
     codeUrl: "/Build/Assembly-CSharp.wasm.unityweb",
+    streamingAssetsUrl: "streamingassets",
   });
 
   const handleFullScreenClick =()=> {
