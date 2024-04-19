@@ -138,8 +138,8 @@ GameObject:
   - component: {fileID: 3521053}
   - component: {fileID: 3521052}
   m_Layer: 0
-  m_Name: Wire2Start
-  m_TagString: Wire2
+  m_Name: Wire6Start
+  m_TagString: Wire6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,7 +187,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5629084884208175553, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
+  - {fileID: 2100000, guid: da92c21ce20448c4dafd212efcc4c9f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -253,7 +253,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5629084884208175553, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
+  - {fileID: 2100000, guid: da92c21ce20448c4dafd212efcc4c9f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b146be724a43364494ca0eaf64e9b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: Wire2
+  destinationTag: Wire6
 --- !u!1 &72682515
 GameObject:
   m_ObjectHideFlags: 0
@@ -3177,8 +3177,8 @@ GameObject:
   - component: {fileID: 574108616}
   - component: {fileID: 574108615}
   m_Layer: 0
-  m_Name: Wire1End
-  m_TagString: Wire1
+  m_Name: Wire4End
+  m_TagString: Wire4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3226,7 +3226,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3661639628750336703, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
+  - {fileID: 18858803709778759, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3292,7 +3292,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3661639628750336703, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
+  - {fileID: 18858803709778759, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3387,7 +3387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b146be724a43364494ca0eaf64e9b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: Wire1
+  destinationTag: Wire4
 --- !u!1001 &661145983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3680,8 +3680,8 @@ GameObject:
   - component: {fileID: 678691037}
   - component: {fileID: 678691036}
   m_Layer: 0
-  m_Name: Wire9End
-  m_TagString: Wire9
+  m_Name: Wire5Start
+  m_TagString: Wire5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3707,7 +3707,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -333415491942882640, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
+  - {fileID: -4610143280253574502, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3802,7 +3802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b146be724a43364494ca0eaf64e9b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: Wire9
+  destinationTag: Wire5
 --- !u!136 &678691038
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3846,7 +3846,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -333415491942882640, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
+  - {fileID: -4610143280253574502, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3906,8 +3906,8 @@ GameObject:
   - component: {fileID: 695418000}
   - component: {fileID: 695417999}
   m_Layer: 0
-  m_Name: Wire8End
-  m_TagString: Wire8
+  m_Name: Wire3Start
+  m_TagString: Wire3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3933,7 +3933,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: deb52d391f090b349a2c2308fa987a44, type: 2}
+  - {fileID: 2100000, guid: 90ad0b223f5684347a2404f1a4cfcd6a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4028,7 +4028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b146be724a43364494ca0eaf64e9b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: Wire8
+  destinationTag: Wire3
 --- !u!136 &695418001
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4072,7 +4072,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: deb52d391f090b349a2c2308fa987a44, type: 2}
+  - {fileID: 2100000, guid: 90ad0b223f5684347a2404f1a4cfcd6a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4369,8 +4369,8 @@ GameObject:
   - component: {fileID: 773020218}
   - component: {fileID: 773020217}
   m_Layer: 0
-  m_Name: Wire5Start
-  m_TagString: Wire5
+  m_Name: Wire9End
+  m_TagString: Wire9
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4396,7 +4396,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4610143280253574502, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
+  - {fileID: -333415491942882640, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4491,7 +4491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b146be724a43364494ca0eaf64e9b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: Wire5
+  destinationTag: Wire9
 --- !u!136 &773020219
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4535,7 +4535,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4610143280253574502, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
+  - {fileID: -333415491942882640, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4810,7 +4810,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorLocked: 1
   roomNameList:
-  - Room 5 - Century Tower
+  - Room 5.1 - Century Tower
+  - Room 5.2 - Century Tower
+  - Room 5.3 - Century Tower
 --- !u!1 &916145117
 GameObject:
   m_ObjectHideFlags: 0
@@ -4987,7 +4989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: keypadCombo
-      value: 401074030
+      value: 130440
       objectReference: {fileID: 0}
     - target: {fileID: 2303921294396319334, guid: b47bdf1669865c841ace96330ee3d7ec, type: 3}
       propertyPath: screenNormalColor.b
@@ -5673,7 +5675,6 @@ MonoBehaviour:
   bookScript: {fileID: 0}
   laptopScript: {fileID: 0}
   keypadScript: {fileID: 0}
-  paintingScript: {fileID: 0}
   paletteScript: {fileID: 0}
   bowlscoreScript: {fileID: 0}
   printerScript: {fileID: 0}
@@ -5777,8 +5778,8 @@ GameObject:
   - component: {fileID: 1183963640}
   - component: {fileID: 1183963639}
   m_Layer: 0
-  m_Name: Wire10End
-  m_TagString: Wire10
+  m_Name: Wire7End
+  m_TagString: Wire7
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5804,7 +5805,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4737706778084857842, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
+  - {fileID: 2100000, guid: 174f9c1037cc9a14486cfa7ffb3ef20e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5899,7 +5900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b146be724a43364494ca0eaf64e9b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: Wire10
+  destinationTag: Wire7
 --- !u!136 &1183963641
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5943,7 +5944,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4737706778084857842, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
+  - {fileID: 2100000, guid: 174f9c1037cc9a14486cfa7ffb3ef20e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6493,8 +6494,8 @@ GameObject:
   - component: {fileID: 1279474440}
   - component: {fileID: 1279474439}
   m_Layer: 0
-  m_Name: Wire7End
-  m_TagString: Wire7
+  m_Name: Wire10End
+  m_TagString: Wire10
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6520,7 +6521,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 174f9c1037cc9a14486cfa7ffb3ef20e, type: 2}
+  - {fileID: 4737706778084857842, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6615,7 +6616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b146be724a43364494ca0eaf64e9b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: Wire7
+  destinationTag: Wire10
 --- !u!136 &1279474441
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6659,7 +6660,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 174f9c1037cc9a14486cfa7ffb3ef20e, type: 2}
+  - {fileID: 4737706778084857842, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6983,8 +6984,8 @@ GameObject:
   - component: {fileID: 1361257668}
   - component: {fileID: 1361257667}
   m_Layer: 0
-  m_Name: Wire3Start
-  m_TagString: Wire3
+  m_Name: Wire8End
+  m_TagString: Wire8
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7010,7 +7011,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 90ad0b223f5684347a2404f1a4cfcd6a, type: 2}
+  - {fileID: 2100000, guid: deb52d391f090b349a2c2308fa987a44, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7105,7 +7106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b146be724a43364494ca0eaf64e9b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: Wire3
+  destinationTag: Wire8
 --- !u!136 &1361257669
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7149,7 +7150,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 90ad0b223f5684347a2404f1a4cfcd6a, type: 2}
+  - {fileID: 2100000, guid: deb52d391f090b349a2c2308fa987a44, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7694,7 +7695,7 @@ GameObject:
   - component: {fileID: 1487408060}
   - component: {fileID: 1487408059}
   - component: {fileID: 1487408058}
-  - component: {fileID: 1487408062}
+  - component: {fileID: 1487408063}
   m_Layer: 0
   m_Name: Back Door
   m_TagString: Untagged
@@ -7788,7 +7789,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1487408062
+--- !u!114 &1487408063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7797,11 +7798,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1487408056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06e8469a9fb2b6e498ed624c631563fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 26f9b1b537cca454690b59a385ec500f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorLocked: 0
-  roomNameList: []
 --- !u!1 &1627714336
 GameObject:
   m_ObjectHideFlags: 0
@@ -8085,7 +8084,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "-.. / .  / -.-. / --- / -.. / . \r\n\n/ -- / . "
+  m_text: '.- / -- / --- / -. / --. / ..- / ...
+
+    each / is a space'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8477,8 +8478,8 @@ GameObject:
   - component: {fileID: 1845368114}
   - component: {fileID: 1845368113}
   m_Layer: 0
-  m_Name: Wire4End
-  m_TagString: Wire4
+  m_Name: Wire1End
+  m_TagString: Wire1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8519,7 +8520,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 18858803709778759, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
+  - {fileID: -3661639628750336703, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8614,7 +8615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b146be724a43364494ca0eaf64e9b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: Wire4
+  destinationTag: Wire1
 --- !u!136 &1845368115
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8658,7 +8659,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 18858803709778759, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
+  - {fileID: -3661639628750336703, guid: 1f9e41e917eca47458f35b8e6384d042, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9687,8 +9688,8 @@ GameObject:
   - component: {fileID: 2109382499}
   - component: {fileID: 2109382498}
   m_Layer: 0
-  m_Name: Wire6Start
-  m_TagString: Wire6
+  m_Name: Wire2Start
+  m_TagString: Wire2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9714,7 +9715,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: da92c21ce20448c4dafd212efcc4c9f1, type: 2}
+  - {fileID: -3661639628750336703, guid: 1e9fe5679a8bd4aba83f9c2bb8a83ae2, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9809,7 +9810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b146be724a43364494ca0eaf64e9b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationTag: Wire6
+  destinationTag: Wire2
 --- !u!136 &2109382500
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9853,7 +9854,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: da92c21ce20448c4dafd212efcc4c9f1, type: 2}
+  - {fileID: -3661639628750336703, guid: 1e9fe5679a8bd4aba83f9c2bb8a83ae2, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

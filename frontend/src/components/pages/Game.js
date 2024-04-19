@@ -8,6 +8,7 @@ import Calculator from '../misc/Calculator';
 import './Game.css'
 import Converter from '../misc/Converter';
 import ModalInfo from '../misc/Information';
+import { Hourglass } from 'react-loader-spinner'
 
 const Game = () => {
 
@@ -79,26 +80,37 @@ const Game = () => {
   const handleSelect = (eventKey) => {
     setDifficulty(eventKey);
   };
-  
+
   return (
     <>
     <div align="center">
-
         <h1 style={{ paddingTop: '2.5rem', fontFamily: "'Anton', sans-serif", color:'#000000'}}>Escape if you can!</h1>
         <Container fluid>
             <Row className="justify-content-center">
                 <Col xs={12} sm={12} md={10} lg={9}>
+                <div style={{ position: 'absolute', top: '60%', left: '30%', zIndex: -1 }}>
+                  <Hourglass
+                    visible={true}
+                    height="80"
+                    width="80"
+                    ariaLabel="hourglass-loading"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    colors={["rgb(48, 86, 132)", '#72a1ed']}
+                  />
+                   <h2>Loading Game...</h2>
+                  </div>
 
-                    <div style={gameStyle}>
-                        <Unity unityProvider={unityProvider} style={{ width: '100%', height: '100%' }} />
-                    </div>
+                  <div style={gameStyle}>
+                      <Unity unityProvider={unityProvider} style={{width: '100%', height: '100%', zIndex: 1}}  />
+                  </div>
 
-                    <Button onClick={handleFullScreenClick} style={{backgroundColor:"rgb(48, 86, 132)", border:'none', marginTop:'-120px'}}>Enter Fullscreen</Button>
-
+                <Button onClick={handleFullScreenClick} style={{backgroundColor:"rgb(48, 86, 132)", border:'none', marginTop:'-120px'}}>Enter Fullscreen</Button>
 
                 </Col>
+                
                 <Col xs={8} sm={8} md={8} lg={3} style={{ paddingTop: '2rem', paddingBottom: '5rem' }}>
-                {/* <ModalInfo/> */}
+                <ModalInfo/>
                     <Tabs
                         id="controlled-tab-example"
                         activeKey={key}
