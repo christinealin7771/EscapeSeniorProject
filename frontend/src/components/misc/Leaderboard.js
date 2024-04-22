@@ -106,7 +106,7 @@ const Leaderboard = () => {
         <Card.Body>
             {
                 topFive.map((item, index) => {
-                    {console.log(item)}
+                    // {console.log(item)}
                     return (
                         <Card.Text style={{color: "black"}} className="font-weight-bold">
                             {index+1}. {item.username} {secondsToTime(item.escapeTime)}

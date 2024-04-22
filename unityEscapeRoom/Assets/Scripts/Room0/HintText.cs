@@ -12,10 +12,20 @@ public class HintText : MonoBehaviour
     void Start()
     {
         sceneHintMap.Add("Room 1.1 - Marston", new string[] { "Focus on the colors on the computer", "Identify the line number for each color.", "The computer also distinguishes the color order." });
+        sceneHintMap.Add("Room 1.2 - Marston", new string[] { "Focus on the colors on the computer", "Identify the line number for each color.", "The computer also distinguishes the color order." });
+        sceneHintMap.Add("Room 1.3 - Marston", new string[] { "Focus on the colors on the computer", "Identify the line number for each color.", "The computer also distinguishes the color order." });
         sceneHintMap.Add("Room 2.1 - Reitz Union", new string[] { "Let's go bowling first! What is the missing numbers?", "What color connects it all?", "Never forget your math especially PEMDAS!" });
-        sceneHintMap.Add("Room 3 - Southwest Rec", new string[] { "Spelling out a good workout is better than digits", "Time is of the essence!", "Look around the room and you have already set the minutes." });
-        sceneHintMap.Add("Room 4 - Malachowsky Hall", new string[] { "The fuses have short-circuited, they do not work.", "Observe the sentence for something strange.", "One entire binary number." });
-        sceneHintMap.Add("Room 5 - Century Tower", new string[] { "The Emperor has a hidden message for your eyes only…", "With the hidden rule, perform the song for the audience.", "Time is up! The clock’s ringing says it has ended." });
+        sceneHintMap.Add("Room 2.2 - Reitz Union", new string[] { "Let's go bowling first! What is the missing numbers?", "What color connects it all?", "Never forget your math especially PEMDAS!" });
+        sceneHintMap.Add("Room 2.3 - Reitz Union", new string[] { "Let's go bowling first! What is the missing numbers?", "What color connects it all?", "Never forget your math especially PEMDAS!" });
+        sceneHintMap.Add("Room 3.1 - Southwest Rec", new string[] { "Spelling out a good workout is better than digits", "Time is of the essence!", "Look around the room and you have already set the minutes." });
+        sceneHintMap.Add("Room 3.2 - Southwest Rec", new string[] { "Spelling out a good workout is better than digits", "Time is of the essence!", "Look around the room and you have already set the minutes." });
+        sceneHintMap.Add("Room 3.3 - Southwest Rec", new string[] { "Spelling out a good workout is better than digits", "Time is of the essence!", "Look around the room and you have already set the minutes." });
+        sceneHintMap.Add("Room 4.1 - Malachowsky Hall", new string[] { "The fuses have short-circuited, they do not work.", "Observe the sentence for something strange.", "One entire binary number." });
+        sceneHintMap.Add("Room 4.2 - Malachowsky Hall", new string[] { "The fuses have short-circuited, they do not work.", "Observe the sentence for something strange.", "One entire binary number." });
+        sceneHintMap.Add("Room 4.3 - Malachowsky Hall", new string[] { "The fuses have short-circuited, they do not work.", "Observe the sentence for something strange.", "One entire binary number." });
+        sceneHintMap.Add("Room 5.1 - Century Tower", new string[] { "The Emperor has a hidden message for your eyes only…", "With the hidden rule, perform the song for the audience.", "Time is up! The clock’s ringing says it has ended." });
+        sceneHintMap.Add("Room 5.2 - Century Tower", new string[] { "The Emperor has a hidden message for your eyes only…", "With the hidden rule, perform the song for the audience.", "Time is up! The clock’s ringing says it has ended." });
+        sceneHintMap.Add("Room 5.3 - Century Tower", new string[] { "The Emperor has a hidden message for your eyes only…", "With the hidden rule, perform the song for the audience.", "Time is up! The clock’s ringing says it has ended." });
     }
 
     // Update is called once per frame
